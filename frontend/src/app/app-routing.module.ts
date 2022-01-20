@@ -8,7 +8,7 @@ import { SobreComponent } from './sobre/sobre.component';
 import { ContatoComponent } from './contato/contato.component';
 
 const routes: Routes = [
-  {path:"",redirectTo:"login",pathMatch: "full"},
+  {path:"",redirectTo:"contato",pathMatch: "full"},
   {path:"login",component: LoginComponent},
   {path:"cadastro",component: CadastroComponent},
   {path:"menu",component:MenuComponent},
