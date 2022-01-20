@@ -1,0 +1,38 @@
+#logo{
+    
+
+}
+.fonte{
+    font-size: 2rem;
+    text-align: justify;
+    
+}
+.titulo{
+    font-size: 3rem;
+    font-weight: bold;
+}
+.bgtitulo{
+    background-color: #133e6f;
+}
+
+.tamimg{
+    height: 150pt;
+    width: 150pt;
+}
+
+.fa{
+    font-size: 35pt;
+    color: rgb(0, 0, 0);
+    padding: 10px;
+  }
+  
+  .fa-github-square:hover {
+    color: rgb(80, 80, 80);
+  }
+  .bgdev{
+      background-color: #1f5ca1;
+  }
+  .fa-linkedin-square:hover{
+      color: blue;
+  }
+
