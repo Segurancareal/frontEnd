@@ -1,9 +1,9 @@
-#logo{
+/* #logo{
     
 
-}
+} */
 .fonte{
-    font-size: 2rem;
+    font-size: 30px;
     text-align: justify;
     
 }
@@ -21,18 +21,26 @@
 }
 
 .fa{
-    font-size: 35pt;
+    font-size: 30pt;
     color: rgb(0, 0, 0);
     padding: 10px;
-  }
-  
-  .fa-github-square:hover {
-    color: rgb(80, 80, 80);
-  }
-  .bgdev{
-      background-color: #1f5ca1;
-  }
-  .fa-linkedin-square:hover{
-      color: blue;
-  }
+}
 
+.fa-github-square:hover {
+    color: rgb(80, 80, 80);
+}
+    .bgdev{
+    background-color: #1f5ca1;
+}
+.fa-linkedin-square:hover{
+    color: #0A66C2;
+}
+
+.sobrefundo{
+    background-color: whitesmoke;
+}
+
+.fotofundo {
+-webkit-box-shadow: -3px -2px 5px 6px rgba(19,62,111,0.88); 
+box-shadow: -3px -2px 5px 6px rgba(19,62,111,0.88);
+}
