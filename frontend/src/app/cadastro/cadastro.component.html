@@ -13,37 +13,37 @@
 
                     <div class="form-group textf">
                         <label for="nome">Nome</label>
-                        <input class="form-control mb-2" type="text" name="nome" id="nome" placeholder="Seu nome*">
+                        <input [(ngModel)]="usuario.nome" class="form-control mb-2" type="text" name="nome" id="nome" placeholder="Seu nome*">
 
                     </div>
 
                     <div class="form-group textf">
                         <label for="email">Email</label>
-                        <input class="form-control mb-2" type="email" name="email" id="email" placeholder="Seu email*">
+                        <input [(ngModel)]="usuario.usuario" class="form-control mb-2" type="email" name="email" id="email" placeholder="Seu email*">
 
                     </div>
 
                     <div class="form-group textf">
                         <label for="foto">Link da Foto</label>
-                        <input class="form-control mb-2" type="text" name="foto" id="foto" placeholder="Link da sua foto*">
+                        <input [(ngModel)]="usuario.foto" class="form-control mb-2" type="text" name="foto" id="foto" placeholder="Link da sua foto*">
 
                     </div>
 
                     <div class="form-group textf">
                         <label for="senha">Senha</label>
-                        <input class="form-control mb-2" type="password" name="senha" id="senha" placeholder="Sua senha*">
+                        <input (input)="confirmSenha($event)" class="form-control mb-2" type="password" name="senha" id="senha" placeholder="Senha de no mínimo 6 dígitos">
 
                     </div>
 
                     <div class="form-group textf">
                         <label for="confirmSenha">Confirmar senha</label>
-                        <input class="form-control mb-2" type="password" name="confirmSenha" id="confirmSenha" placeholder="Confirme sua senha*">
+                        <input [(ngModel)]="usuario.senha" class="form-control mb-2" type="password" name="confirmSenha" id="confirmSenha" placeholder="Confirme sua senha*">
 
                     </div>
 
                     <div class="form-group">
                         <label for="tipo">Tipo de usuário</label>
-                        <select class="form-control" name="tipo" id="tipo">
+                        <select class="form-control" name="tipo" id="tipo" (change)="tipoUsuario($event)">
                             <option>Selecione um tipo de usuário:</option>
                             <option value="normal">Normal</option>
                             <option value="adm">Administrador</option>
@@ -52,7 +52,7 @@
 
                     <div class="d-flex justify-content-center">
                         <button type="submit" class="btn btn-danger mr-4" routerLink="/inicio">Cancelar</button>
-                        <button type="submit" class="btn btn-success mr-4">Cadastrar</button>
+                        <button type="submit" class="btn btn-success mr-4" (click)="cadastrar()">Cadastrar</button>
                     </div>
 
                 </div>
