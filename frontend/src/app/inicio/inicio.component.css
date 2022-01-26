@@ -1,0 +1,71 @@
+html {
+    scroll-behavior: smooth;
+}
+
+.topo{
+    background-color: #133e6f;
+}
+
+form {
+    background-color: #192a56;
+    -webkit-box-shadow: 5px 4px 8px 3px rgba(19,62,111,0.84); 
+    box-shadow: 5px 4px 8px 3px rgba(19,62,111,0.84);
+    margin: 0;
+    padding: 0;
+    border-radius: 3rem;
+    
+}
+
+label{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+h4 {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: #fbc531;
+}
+
+.fonte{
+    font-size: 30px;
+    text-align: justify;
+    
+}
+.titulo{
+    font-size: 3rem;
+    font-weight: bold;
+}
+.bgtitulo{
+    background-color: #133e6f;
+}
+
+.tamimg{
+    height: 150pt;
+    width: 150pt;
+}
+
+.icon{
+    font-size: 30pt;
+    color: rgb(0, 0, 0);
+    padding: 10px;
+}
+
+.fa-github-square:hover {
+    color: rgb(80, 80, 80);
+}
+    .bgdev{
+    background-color: #1f5ca1;
+}
+.fa-linkedin-square:hover{
+    color: #0A66C2;
+}
+
+.sobrefundo{
+    background-color: whitesmoke;
+}
+
+.fotofundo {
+-webkit-box-shadow: -3px -2px 5px 6px rgba(19,62,111,0.88); 
+box-shadow: -3px -2px 5px 6px rgba(19,62,111,0.88);
+}
