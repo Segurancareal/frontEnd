@@ -6,8 +6,11 @@ form {
     box-shadow: 5px 4px 8px 3px rgba(19,62,111,0.84);
     margin: 0;
     padding: 0;
+    border-radius: 3rem;
     
 }
+
+
 
 label{
     margin: 0;
