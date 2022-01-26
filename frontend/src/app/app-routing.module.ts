@@ -8,11 +8,7 @@ import { SobreComponent } from './sobre/sobre.component';
 import { ContatoComponent } from './contato/contato.component';
 
 const routes: Routes = [
-<<<<<<< HEAD
-  {path:"",redirectTo:"login",pathMatch: "full"},
-=======
   {path:"",redirectTo:"inicio",pathMatch: "full"},
->>>>>>> 7d0375caaccf6a158da31a06f30003def0cc062c
   {path:"login",component: LoginComponent},
   {path:"cadastro",component: CadastroComponent},
   {path:"menu",component:MenuComponent},
