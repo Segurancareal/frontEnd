@@ -13,6 +13,8 @@ import { RodapeComponent } from './rodape/rodape.component';
 import { InicioComponent } from './inicio/inicio.component';
 import { ContatoComponent } from './contato/contato.component';
 import { SobreComponent } from './sobre/sobre.component';
+import { MenufeedComponent } from './menufeed/menufeed.component';
+import { FeedComponent } from './feed/feed.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +25,9 @@ import { SobreComponent } from './sobre/sobre.component';
     RodapeComponent,
     InicioComponent,
     ContatoComponent,
-    SobreComponent
+    SobreComponent,
+    MenufeedComponent,
+    FeedComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,31 @@
+<nav class="navbar navbar-expand-lg navbar-light topo">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto d-flex align-items-center">
+        <li class="nav-item active">
+            <div class="row">
+                <img src="{{foto}}" alt="imagem do user" width="50px" height="50px" class="img-fluid rounded-circle mr-5">
+          <p class="text-white fsmenu">Bem Vindo {{nome}}</p>
+            </div>
+          
+        </li>
+  
+        
+  
+      </ul>
+  
+      <ul class="navbar-nav ml-auto d-flex align-items-center">
+        <li class="nav-item pl-3">
+            <a (click)="deslogar()" class="m-0 font-weight-bold text-white fs-16">Sair <i class="fa fa-sign-out" aria-hidden="true"></i>
+            </a>
+        </li>
+  
+       
+    </ul>
+  
+    </div>
+  </nav>
+  

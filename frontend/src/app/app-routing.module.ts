@@ -6,6 +6,7 @@ import { MenuComponent } from './menu/menu.component';
 import { InicioComponent } from './inicio/inicio.component';
 import { SobreComponent } from './sobre/sobre.component';
 import { ContatoComponent } from './contato/contato.component';
+import { FeedComponent } from './feed/feed.component';
 
 const routes: Routes = [
   {path:"",redirectTo:"inicio",pathMatch: "full"},
@@ -15,6 +16,7 @@ const routes: Routes = [
   {path:"inicio",component: InicioComponent},
   {path:"sobre",component: SobreComponent},
   {path:"contato",component: ContatoComponent},
+  {path:"feed",component: FeedComponent}
 ];
 
 @NgModule({
