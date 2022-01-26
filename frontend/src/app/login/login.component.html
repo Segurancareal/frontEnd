@@ -1,6 +1,41 @@
-<ul>
-    <li>
-        <p>Faça o cadastro</p> <button type="submit" class="btn btn-secondary mr-4" routerLink="/cadastro">Aqui</button> 
+<div class="container-fluid">
 
-    </li>
-</ul>
+  <div class="row d-flex justify-content-center p-3">
+    <div class="col-md-6 d-flex justify-content-center" >
+
+      <div class="col-md-8 mb-5 mt-5 formulario border shadow">
+
+      <h1 class="text-center mb-3">Entrar</h1>
+
+      <div class="form-group">
+        <label for="usuario">Usuario</label>
+        <input class="form-control" type="text" name="usuario" id="usuario"
+        placeholder="Seu usuario">
+      </div>
+
+      <div class="form-group">
+        <label for="senha">Senha</label>
+        <input class="form-control" type="password" name="senha" id="senha"
+        placeholder="Sua senha">
+      </div>
+
+      <div class="d-flex justify-content-center">
+
+        <button type="submit" class="btn btn-success" >Entrar</button>
+
+      </div>
+
+      <hr class="mt-5 mb-5">
+
+      <p class="text-center"> Não tem uma conta? <a routerLink="/cadastro">Cadastre-se</a></p>
+
+        </div>
+      </div>
+
+      <div class="col-md-6" id="img-bg">
+      </div>
+
+  </div>
+
+
+
