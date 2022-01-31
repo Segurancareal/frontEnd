@@ -4,7 +4,27 @@ html {
     scroll-behavior: smooth;
 }
 
+.texto{
+    color: #000000;
+}
 
+strong{
+    color: #fbc531;
+}
+
+.yout{
+    font-size: 35pt;
+    color: #c4302b;
+    padding: 10px;
+  }
+
+.yout:hover{
+    color: #a1241f ;
+}
+
+.ods{
+    font-size: 18px;
+}
 
 .topo{
     background-color: #133e6f;
