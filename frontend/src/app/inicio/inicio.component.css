@@ -69,3 +69,15 @@ h4 {
 -webkit-box-shadow: -3px -2px 5px 6px rgba(19,62,111,0.88); 
 box-shadow: -3px -2px 5px 6px rgba(19,62,111,0.88);
 }
+
+.fs-16 {
+    font-size: 16pt;
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.fs-16:hover{
+    text-decoration: underline;
+    color: #fbc531;
+
+}

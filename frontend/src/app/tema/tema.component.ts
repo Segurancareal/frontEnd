@@ -21,8 +21,9 @@ export class TemaComponent implements OnInit {
 
   ngOnInit(){
     if(environment.token == ''){
-      this.router.navigate(['/entrar'])
+      this.router.navigate(['/login'])
     }
+    this.findAllTemas()
   }
 
   cadastrar(){
@@ -30,6 +31,13 @@ export class TemaComponent implements OnInit {
       this.tema = resp
       alert('Tema cadastrado com sucesso!')
       this.tema = new Tema()
+    })
+    this.findAllTemas()
+  }
+
+  findAllTemas(){
+    this.temaService.getAllTema().subscribe((resp: Tema[])=> {
+      this.listaTemas = resp
     })
   }
 
