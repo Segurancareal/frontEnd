@@ -17,10 +17,6 @@ const routes: Routes = [
   {path:"menu",component:MenuComponent},
   {path:"inicio",component: InicioComponent},
   {path:"feed",component: FeedComponent},
-<<<<<<< HEAD
-=======
-
->>>>>>> 7dec26e007e9c39bd3c275b68e401b73e50a0914
   {path:"menufeed",component: MenufeedComponent},
   {path: "tema", component: TemaComponent},
   {path: "tema-edit/:id", component: TemaEditComponent},
