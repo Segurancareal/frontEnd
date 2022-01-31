@@ -16,8 +16,15 @@
   
       <ul class="navbar-nav ml-auto d-flex align-items-center">
         <li class="nav-item pl-3">
-            <a (click)="deslogar()" class="m-0 font-weight-bold fs-16" routerLink="/inicio">Sair <i class="fa fa-sign-out" aria-hidden="true"></i>
-            </a>
+            <a (click)="deslogar()" routerLink="/inicio" class="link">
+              <span class="mask">
+              <div class="link-container">
+                  <span class="link-title1 title m-0 font-weight-bold fs-16">Sair <i class="fa fa-sign-out" aria-hidden="true"></i></span>
+                  <span class="link-title2 title m-0 font-weight-bold fs-16">Sair <i class="fa fa-sign-out" aria-hidden="true"></i></span>
+              </div>
+              </span>
+          </a>
+
         </li>
   
     

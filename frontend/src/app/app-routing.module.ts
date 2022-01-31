@@ -5,6 +5,8 @@ import { LoginComponent } from './login/login.component';
 import { MenuComponent } from './menu/menu.component';
 import { InicioComponent } from './inicio/inicio.component';
 import { FeedComponent } from './feed/feed.component';
+import { MenufeedComponent } from './menufeed/menufeed.component';
+import { TemaComponent } from './tema/tema.component';
 
 const routes: Routes = [
   {path:"",redirectTo:"inicio",pathMatch: "full"},
@@ -12,7 +14,9 @@ const routes: Routes = [
   {path:"cadastro",component: CadastroComponent},
   {path:"menu",component:MenuComponent},
   {path:"inicio",component: InicioComponent},
-  {path:"feed",component: FeedComponent}
+  {path:"feed",component: FeedComponent},
+  {path:"menufeed",component: MenufeedComponent},
+  {path: "tema", component: TemaComponent}
 ];
 
 @NgModule({
