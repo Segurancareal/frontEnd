@@ -15,6 +15,8 @@ import { MenufeedComponent } from './menufeed/menufeed.component';
 import { FeedComponent } from './feed/feed.component';
 import { PostagensComponent } from './postagens/postagens.component';
 import { TemaComponent } from './tema/tema.component';
+import { TemaEditComponent } from './edit/tema-edit/tema-edit.component';
+import { TemaDeleteComponent } from './delete/tema-delete/tema-delete.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +29,9 @@ import { TemaComponent } from './tema/tema.component';
     MenufeedComponent,
     FeedComponent,
     PostagensComponent,
-    TemaComponent
+    TemaComponent,
+    TemaEditComponent,
+    TemaDeleteComponent
   ],
   imports: [
     BrowserModule,
