@@ -11,11 +11,12 @@ export class PostagemService {
 
   constructor(private http: HttpClient) { }
 
-  token = {
+  token ={
     headers: new HttpHeaders().set('Authorization', environment.token)
   }
 
-  getAllPostagens(): Observable<Postagem[]>{
+  getAllPostagens(): Observable<Postagem[]> {
+
     return this.http.get<Postagem[]>('https://segurancareal.herokuapp.com/postagens', this.token)
   }
 
@@ -23,17 +24,20 @@ export class PostagemService {
     return this.http.get<Postagem>(`https://segurancareal.herokuapp.com/postagens/${id}`, this.token)
   }
 
-  postPostagem(postagem: Postagem): Observable<Postagem>{
+  //pesquisa postagens
+  getByTituloPostagem(titulo: string): Observable<Postagem[]>{
+    return this.http.get<Postagem[]>(`https://segurancareal.herokuapp.com/postagens/titulo/${titulo}`, this.token)
+  }
+
+  postPostagem(postagem: Postagem): Observable<Postagem> {
     return this.http.post<Postagem>('https://segurancareal.herokuapp.com/postagens', postagem, this.token)
   }
 
-  putPostagem(postagem: Postagem): Observable<Postagem>{
-    console.log(postagem)
+  putPostagem(postagem: Postagem) : Observable<Postagem>{
     return this.http.put<Postagem>('https://segurancareal.herokuapp.com/postagens', postagem, this.token)
   }
 
-  deletePostagem(id: number) {
-    return this.http.delete(`https://bloggyme.herokuapp.com/postagens/${id}`, this.token)
+  deletePostagem(id: number){
+    return this.http.delete(`https://segurancareal.herokuapp.com/postagens/deletar/${id}`, this.token)
   }
-
 }
