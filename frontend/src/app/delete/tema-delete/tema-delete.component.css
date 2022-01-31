@@ -1,8 +1,17 @@
-.container{
-    background-color: #133e6f;
-    min-height: 100vh;
-}
-
 .fundo {
     background-color: #f6f6f6;
 }
+.container-fluid{
+    background-color: #fff;
+    min-height: 100vh;
+}
+
+.container{
+    background-color: #133e6f;
+    min-height: 75vh;
+    width: 60%;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.6), 0 10px 20px 0 rgba(0, 0, 0, 0.9);
+    border-radius: 16px;
+}
+
+
