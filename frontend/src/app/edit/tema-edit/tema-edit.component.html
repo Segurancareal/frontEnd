@@ -1,36 +1,38 @@
 <div class="container-fluid py-5">
+    <div class="container mt-5 ">
 
-    <div class="row d-flex justify-content-center">
-        <div class="col-md-12">
-            <h1 class="text-center text-primary">Atualizar Tema</h1>
+        <div class="row d-flex justify-content-center pt-5 ">
+            <div class="col-md-12">
+                <h1 class="text-center text-light">Atualizar Tema</h1>
 
-        </div>
-    </div>
-
-    <div class="row d-flex justify-content-center">
-        <div class="col-md-6">
-
-            <div class="form-group">
-                <label for="descricao">Cidade</label>
-                <input type="text" class="form-control" id="descricao" [(ngModel)]='tema.descricao'>
-            </div>
-
-            <div class="form-group">
-                <label for="descricao">Bairro</label>
-                <input type="text" class="form-control" id="descricao" [(ngModel)]='tema.assunto'>
-            </div>
-
-            <div class="form-group">
-                <label for="descricao">Crime</label>
-                <input type="text" class="form-control" id="descricao" [(ngModel)]='tema.hashtag'>
-            </div>
-
-            <div class="d-flex justify-content-center">
-                <button class="btn btn-danger mr-4" routerLink="/tema">Cancelar</button>
-                <button class="btn btn-success" (click)="atualizar()">Atualizar</button>
             </div>
         </div>
 
+        <div class="row d-flex justify-content-center pt-3">
+            <div class="col-md-6">
+
+                <div class="form-group">
+                    <label class="text-light" for="descricao">Cidade</label>
+                    <input type="text" class="form-control" id="descricao" [(ngModel)]='tema.descricao'>
+                </div>
+
+                <div class="form-group">
+                    <label class="text-light" for="descricao">Bairro</label>
+                    <input type="text" class="form-control" id="descricao" [(ngModel)]='tema.assunto'>
+                </div>
+
+                <div class="form-group">
+                    <label class="text-light" for="descricao">Crime</label>
+                    <input type="text" class="form-control" id="descricao" [(ngModel)]='tema.hashtag'>
+                </div>
+
+                <div class="d-flex justify-content-center pt-3">
+                    <button class="btn btn-danger mr-4" routerLink="/tema">Cancelar</button>
+                    <button class="btn btn-success" (click)="atualizar()">Atualizar</button>
+                </div>
+            </div>
+
+        </div>
     </div>
 
 </div>
