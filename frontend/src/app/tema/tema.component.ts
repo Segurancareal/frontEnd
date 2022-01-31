@@ -20,7 +20,6 @@ export class TemaComponent implements OnInit {
   ) { }
 
   ngOnInit(){
-
     if(environment.token == ''){
       this.router.navigate(['/login'])
     }
@@ -34,6 +33,7 @@ export class TemaComponent implements OnInit {
       this.findAllTemas()
       this.tema = new Tema()
     })
+    this.findAllTemas()
   }
 
   findAllTemas(){
@@ -41,6 +41,5 @@ export class TemaComponent implements OnInit {
       this.listaTemas = resp
     })
   }
-
 
 }
