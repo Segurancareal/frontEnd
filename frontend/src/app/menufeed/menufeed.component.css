@@ -5,3 +5,24 @@
     font-size: 2rem;
     font-weight: bold;
 }
+
+a {
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.fs-16 {
+    font-size: 16pt;
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.fs-16:hover{
+    text-decoration: underline;
+    color: #fbc531;
+
+}
+
+.p-16{
+    font-size: 16pt;
+}
