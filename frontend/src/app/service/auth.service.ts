@@ -22,6 +22,15 @@ export class AuthService {
     return this.http.post<Usuario>('https://segurancareal.herokuapp.com/usuarios/cadastrar', user )
   }
 
+  getByIdUser(id: number): Observable<Usuario>{
+    return this.http.get<Usuario>(`https://segurancareal.herokuapp.com/usuarios/${id}`)
+  }
+
+  putUsuario(user: Usuario): Observable<Usuario> {
+    return this.http.put<Usuario>('https://segurancareal.herokuapp.com/usuarios/atualizar', user)
+  }
+
+
   logado(){
     let ok: boolean = false;
 
