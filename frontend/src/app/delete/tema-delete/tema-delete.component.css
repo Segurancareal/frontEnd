@@ -1,4 +1,8 @@
 .container{
-    background-color: #bebebe;
+    background-color: #133e6f;
     min-height: 100vh;
+}
+
+.fundo {
+    background-color: #f6f6f6;
 }
