@@ -19,19 +19,12 @@ export class TemaService {
   getAllTema(): Observable<Tema[]>{
     return this.http.get<Tema[]>('https://segurancareal.herokuapp.com/temas', this.token)
   }
-
-<<<<<<< HEAD
   getByIdTema(id: number): Observable<Tema> {
-=======
-  getByIdTema(id: number): Observable<Tema>{
->>>>>>> d760f361acc7c148832a119d49e5b14d2494cb66
     return this.http.get<Tema>(`https://segurancareal.herokuapp.com/temas/${id}`, this.token)
   }
 
   postTema(tema: Tema): Observable<Tema>{
     return this.http.post<Tema>('https://segurancareal.herokuapp.com/temas', tema, this.token)
-<<<<<<< HEAD
-
   }
 
   putTema(tema: Tema): Observable<Tema> {
@@ -40,16 +33,6 @@ export class TemaService {
 
   deleteTema(id: number) {
     return this.http.delete(`https://segurancareal.herokuapp.com/temas/${id}`, this.token)
-=======
-  }
-
-  putTema(tema: Tema): Observable<Tema>{
-    return this.http.put<Tema>('https://segurancareal.herokuapp.com/temas', tema, this.token)
-  }
-
-  deleteTema(id:number){
-    return this.http.delete<Tema>(`https://segurancareal.herokuapp.com/temas/${id}`, this.token)
->>>>>>> d760f361acc7c148832a119d49e5b14d2494cb66
   }
 
 }

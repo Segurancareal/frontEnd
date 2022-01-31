@@ -5,12 +5,9 @@ import { LoginComponent } from './login/login.component';
 import { MenuComponent } from './menu/menu.component';
 import { InicioComponent } from './inicio/inicio.component';
 import { FeedComponent } from './feed/feed.component';
-<<<<<<< HEAD
 import { MenufeedComponent } from './menufeed/menufeed.component';
-=======
 import { TemaEditComponent } from './edit/tema-edit/tema-edit.component';
 import { TemaDeleteComponent } from './delete/tema-delete/tema-delete.component';
->>>>>>> d760f361acc7c148832a119d49e5b14d2494cb66
 import { TemaComponent } from './tema/tema.component';
 
 const routes: Routes = [
@@ -20,17 +17,11 @@ const routes: Routes = [
   {path:"menu",component:MenuComponent},
   {path:"inicio",component: InicioComponent},
   {path:"feed",component: FeedComponent},
-<<<<<<< HEAD
   {path:"menufeed",component: MenufeedComponent},
-  {path: "tema", component: TemaComponent}
-=======
   {path: "tema", component: TemaComponent},
-
   {path: "tema-edit/:id", component: TemaEditComponent},
   {path: "tema-delete/:id", component: TemaDeleteComponent}
 
-
->>>>>>> d760f361acc7c148832a119d49e5b14d2494cb66
 ];
 
 @NgModule({
