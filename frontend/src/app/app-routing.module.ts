@@ -4,8 +4,6 @@ import { CadastroComponent } from './cadastro/cadastro.component';
 import { LoginComponent } from './login/login.component';
 import { MenuComponent } from './menu/menu.component';
 import { InicioComponent } from './inicio/inicio.component';
-import { SobreComponent } from './sobre/sobre.component';
-import { ContatoComponent } from './contato/contato.component';
 import { FeedComponent } from './feed/feed.component';
 
 const routes: Routes = [
@@ -14,8 +12,6 @@ const routes: Routes = [
   {path:"cadastro",component: CadastroComponent},
   {path:"menu",component:MenuComponent},
   {path:"inicio",component: InicioComponent},
-  {path:"sobre",component: SobreComponent},
-  {path:"contato",component: ContatoComponent},
   {path:"feed",component: FeedComponent}
 ];
 

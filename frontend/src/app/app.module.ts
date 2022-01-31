@@ -11,10 +11,10 @@ import { LoginComponent } from './login/login.component';
 import { MenuComponent } from './menu/menu.component';
 import { RodapeComponent } from './rodape/rodape.component';
 import { InicioComponent } from './inicio/inicio.component';
-import { ContatoComponent } from './contato/contato.component';
-import { SobreComponent } from './sobre/sobre.component';
 import { MenufeedComponent } from './menufeed/menufeed.component';
 import { FeedComponent } from './feed/feed.component';
+import { PostagensComponent } from './postagens/postagens.component';
+import { TemaComponent } from './tema/tema.component';
 
 @NgModule({
   declarations: [
@@ -24,10 +24,10 @@ import { FeedComponent } from './feed/feed.component';
     MenuComponent,
     RodapeComponent,
     InicioComponent,
-    ContatoComponent,
-    SobreComponent,
     MenufeedComponent,
-    FeedComponent
+    FeedComponent,
+    PostagensComponent,
+    TemaComponent
   ],
   imports: [
     BrowserModule,
