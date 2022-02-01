@@ -12,6 +12,7 @@ export class MenufeedComponent implements OnInit {
 
   foto = environment.foto;
   nome = environment.nome
+  id = environment.id
 
   constructor(private router : Router) { }
 
