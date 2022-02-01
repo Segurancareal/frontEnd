@@ -7,6 +7,7 @@ import { Usuario } from '../model/Usuario';
 import { AuthService } from '../service/auth.service';
 import { TemaService } from '../service/tema.service';
 import { PostagemService } from '../service/postagem.service';
+import { AlertasService } from '../service/alertas.service';
 
 @Component({
   selector: 'app-feed',
@@ -20,10 +21,11 @@ export class FeedComponent implements OnInit {
 
   //Pesquisa postagem
   tituloPost: string
+  descricaoTema: string
 
   tema: Tema = new Tema()
   listaTemas: Tema[]
-  idTema: number
+  idTema: number  
   nomeTema: string
 
   user: Usuario = new Usuario()
@@ -55,6 +57,8 @@ export class FeedComponent implements OnInit {
     if (environment.token == '') {
       this.router.navigate(['/login'])
     }
+
+    this.authService
 
     this.getAllTemas()
     this.getAllPostagens()
@@ -93,6 +97,14 @@ export class FeedComponent implements OnInit {
 
     this.user.id = this.idUser
     this.postagem.usuario = this.user
+
+    this.postagemService.postPostagem(this.postagem).subscribe((resp: Postagem) => {
+      this.postagem = resp
+      alert('Postagem Realizada com sucesso!')
+      this.postagem = new Postagem()
+      this.getAllPostagens()
+      
+    })
 
   }
 
