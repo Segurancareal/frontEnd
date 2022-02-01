@@ -38,7 +38,7 @@ import { UsuarioEditComponent } from './edit/usuario-edit/usuario-edit.component
     AlertasComponent,
     PostagemEditComponent,
     PostagemDeleteComponent,
-    UsuarioEditComponent,
+    UsuarioEditComponent
   ],
   imports: [
     BrowserModule,
