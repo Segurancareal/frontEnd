@@ -26,6 +26,7 @@ export class FeedComponent implements OnInit {
   tema: Tema = new Tema()
   listaTemas: Tema[]
   idTema: number  
+  nomeTema: string
 
   user: Usuario = new Usuario()
   idUser = environment.id
@@ -47,8 +48,7 @@ export class FeedComponent implements OnInit {
     private router: Router,
     private temaService: TemaService,
     public authService: AuthService,
-    private postagemService: PostagemService,
-    private alertas: AlertasService
+    private postagemService: PostagemService
   ) { }
 
   ngOnInit() {
@@ -57,6 +57,8 @@ export class FeedComponent implements OnInit {
     if (environment.token == '') {
       this.router.navigate(['/login'])
     }
+
+    this.authService
 
     this.getAllTemas()
     this.getAllPostagens()
@@ -95,6 +97,14 @@ export class FeedComponent implements OnInit {
 
     this.user.id = this.idUser
     this.postagem.usuario = this.user
+
+    this.postagemService.postPostagem(this.postagem).subscribe((resp: Postagem) => {
+      this.postagem = resp
+      alert('Postagem Realizada com sucesso!')
+      this.postagem = new Postagem()
+      this.getAllPostagens()
+      
+    })
 
   }
 
