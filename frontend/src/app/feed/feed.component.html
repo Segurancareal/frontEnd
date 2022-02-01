@@ -1,8 +1,6 @@
 <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
 
 
-
-
 <div class="container-fluid bg-cz pl-5 pr-5">
   
   <div class="row bg-cz">
@@ -60,14 +58,16 @@
                 
                 <p class="card-text"><small class="text-muted">{{item.tema.descricao}}</small></p>
 
-                <p class="card-text"><small class="text-muted">{{item.data| date: 'dd/MM/yyyy'}} às {{item.data | date: 'HH:mm'}}</small></p>
-              
+                <p class="card-text"><small class="text-muted">{{item.data| date: 'dd/MM/yyyy'}} </small></p>
+               
                 <h5 class="card-text">{{item.titulo}}</h5>
-                <p class="card-title">{{item.descricao}</p>
+                <p class="card-title">{{item.texto}}</p>
                 <p class="card-text"><small class="text-muted"></small></p>
                 
                 <img class="card-img-top" src="{{item.foto}}"   alt="Imagem de capa do card">
               </div>
+              <a class="btn btn-success" [routerLink]="['/postagem-edit', item.id]">Atualizar</a>
+              <a class="btn btn-danger" [routerLink]="['/postagem-delete', item.id]">Deletar</a>
 
           </div>
       </div>
@@ -79,7 +79,7 @@
             </table>  
             
             <table *ngFor='let item of listaTemas' class="list-group-item list-group-item-action">
-              {{item.descricao}
+              {{item.descricao}}
             </table>
           </div>
       </div>
