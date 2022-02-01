@@ -1,1 +1,42 @@
-<p>postagem-edit works!</p>
+<div class="fundo">
+    <div class="container pt-5 pb-5">
+    
+        <div class="row">
+            <div class="col-md-12">
+                <h1 class="text-center texto fonteTerror font-weight-bold">Atualizar Postagem</h1>
+            </div>
+        </div>
+    
+    
+        <div class="row d-flex justify-content-center">
+            <div class="col-md-6">
+    
+                    <div class="form-group fonteTexto font-weight-bold">
+                        <label for="titulo">Título</label>
+                        <input  type="text" class="form-control" id="titulo" placeholder="Digite o Título mínimo 5 caracteres">
+                    </div>
+        
+                    <div class="form-group fonteTexto font-weight-bold">
+                        <label for="texto">Texto</label>
+                        <textarea  class="form-control" name="texto" id="texto" placeholder="Mínimo 10 a 1000 caracteres" rows="3"></textarea>
+                    </div>
+        
+                    <div class="form-group fonteTexto font-weight-bold">
+                        <label for="texto">Escolha um tema ou <a class="text-warning" data-dismiss="modal" routerLink="/tema">cadastre um novo</a>: </label>
+                        <select name="tema" id="tema" class="form-control"  (change)="findByIdTema()">
+                            <option *ngFor="let item of listaTemas" value="{{item.id}}">
+                            {{item.descricao}}
+                            </option>
+                        </select>
+                    </div>
+    
+                    <div class="d-flex justify-content-center fonteTexto">
+                        <button class="btn btn-danger mr-4" routerLink="/inicio" >Cancelar</button>
+                        <button class="btn btn-success" (click)="atualizar()" >Atualizar</button>
+                    </div>
+    
+            </div>
+        </div>
+    
+    </div>
+    </div>
