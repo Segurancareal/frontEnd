@@ -32,6 +32,9 @@ export class UsuarioEditComponent implements OnInit {
       this.router.navigate(['/login'])
     }
 
+    this.authService.refreshToken()
+
+
     this.idUser = this.route.snapshot.params['id']
     this.findByIdUser(this.idUser)
 

@@ -66,8 +66,10 @@
                 
                 <img class="card-img-top" src="{{item.foto}}"   alt="Imagem de capa do card">
               </div>
-              <a class="btn btn-success" [routerLink]="['/postagem-edit', item.id]">Atualizar</a>
+              <div class="form-group d-flex justify-content-center">
+              <a class="btn btn-success mr-3" [routerLink]="['/postagem-edit', item.id]">Atualizar</a>
               <a class="btn btn-danger" [routerLink]="['/postagem-delete', item.id]">Deletar</a>
+              </div>
 
           </div>
       </div>

@@ -26,7 +26,6 @@ export class FeedComponent implements OnInit {
   tema: Tema = new Tema()
   listaTemas: Tema[]
   idTema: number  
-  nomeTema: string
 
   user: Usuario = new Usuario()
   idUser = environment.id
@@ -48,7 +47,8 @@ export class FeedComponent implements OnInit {
     private router: Router,
     private temaService: TemaService,
     public authService: AuthService,
-    private postagemService: PostagemService
+    private postagemService: PostagemService,
+    private alertas: AlertasService
   ) { }
 
   ngOnInit() {
@@ -100,7 +100,7 @@ export class FeedComponent implements OnInit {
 
     this.postagemService.postPostagem(this.postagem).subscribe((resp: Postagem) => {
       this.postagem = resp
-      alert('Postagem Realizada com sucesso!')
+      this.alertas.showAlertSuccess('Postagem Realizada com sucesso!')
       this.postagem = new Postagem()
       this.getAllPostagens()
       
@@ -123,6 +123,16 @@ export class FeedComponent implements OnInit {
     } else {
       this.postagemService.getByTituloPostagem(this.tituloPost).subscribe((resp: Postagem[]) => {
         this.listaPostagens = resp
+      })
+    }
+  }
+
+  findByDescricaoTema(){
+    if(this.descricaoTema == ''){
+      this.getAllTemas()
+    } else {
+      this.temaService.getByDescricaoTema(this.descricaoTema).subscribe((resp: Tema[])=>{
+        this.listaTemas = resp
       })
     }
   }

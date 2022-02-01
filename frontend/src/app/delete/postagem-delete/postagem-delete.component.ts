@@ -46,7 +46,7 @@ this.postagemService.getByIdPostagem(id).subscribe((resp: Postagem)=>{
 apagar(){
   this.postagemService.deletePostagem(this.idPost).subscribe(()=>{
     this.alertas.showAlertSuccess('Postagem apagada com sucesso!')
-    this.router.navigate(['/inicio'])
+    this.router.navigate(['/feed'])
   })
 }
 
