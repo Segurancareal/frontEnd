@@ -7,6 +7,7 @@ import { Usuario } from '../model/Usuario';
 import { AuthService } from '../service/auth.service';
 import { TemaService } from '../service/tema.service';
 import { PostagemService } from '../service/postagem.service';
+import { AlertasService } from '../service/alertas.service';
 
 @Component({
   selector: 'app-feed',
@@ -20,11 +21,11 @@ export class FeedComponent implements OnInit {
 
   //Pesquisa postagem
   tituloPost: string
+  descricaoTema: string
 
   tema: Tema = new Tema()
   listaTemas: Tema[]
-  idTema: number
-  nomeTema: string
+  idTema: number  
 
   user: Usuario = new Usuario()
   idUser = environment.id
@@ -46,7 +47,8 @@ export class FeedComponent implements OnInit {
     private router: Router,
     private temaService: TemaService,
     public authService: AuthService,
-    private postagemService: PostagemService
+    private postagemService: PostagemService,
+    private alertas: AlertasService
   ) { }
 
   ngOnInit() {
