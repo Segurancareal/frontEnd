@@ -46,6 +46,7 @@ export class MeuPerfilComponent implements OnInit {
     private temaService: TemaService,
     public authService: AuthService,
     private alertas: AlertasService,
+    
   ) { }
 
   ngOnInit(){

@@ -1,17 +1,18 @@
 
 <div class="fundo texto">
-<div class="container-fluid pt-5 bg-cz pl-5 pr-5">
+  <div class="container-fluid pl-5 pr-5 d-flex justify-content-center pb-5">
 
-  <div class="row bg-cz">
+
+  <div class="row">
 
       <!-- Div do card do Perfil -->
       <div class="col-md-2 m-0">
-          <div class="card mt-5 sticky-top justify-content-center align-items-center" style="width: 100%;">
+          <div class="card mt-5 d-flex justify-content-center align-items-center box" style="width: 100%;">
 
-            <img class="card-img-top mt-3" src="{{foto}}" class="rounded mt-4"
+            <img class=" card-img-top mt-2" src="{{foto}}" class="rounded mt-4"
                   alt="Imagem de perfil do usuário" style="width: 70% ">
 
-                  <div class="card-body">
+                  <div class="card-body bg-white">
                     <h5 class="card-title">{{nome}}</h5>
                     <p class="card-text"></p>
                   </div>
@@ -19,7 +20,7 @@
                   <ul class="list-group list-group-flush" style="width: 100%;">
 
                     <li class="list-group-item">
-                      <a routerLink='/meu-perfil'><i class="fa fa-user" aria-hidden="true"></i> Meu perfil</a>
+                      <a routerLink='/meu-perfil'><i class="fa fa-user" aria-hidden="true"></i> Minhas postagens</a>
                     </li>
 
                     <li class="list-group-item">
@@ -30,7 +31,7 @@
           </div>
       </div>
 
-      <div class="col-md-8 pt-5 d-flex justify-content-center flex-wrap">
+      <div class="col-md-8 d-flex justify-content-center flex-wrap">
 
           <!-- div para publicar e pesquisar -->
           <div class="col-lg-10 profile-col-main">
@@ -63,11 +64,10 @@
                 <p class="card-title">{{item.texto}}</p>
                 <p class="card-text"><small class="text-muted">{{item.hashtag}}</small></p>
 
-                <img class="card-img-top" src="{{item.foto}}"   alt="Imagem de capa do card">
-              </div>
-              <div class="form-group d-flex justify-content-center">
-              <a class="btn btn-success mr-3" [routerLink]="['/postagem-edit', item.id]">Atualizar</a>
-              <a class="btn btn-danger" [routerLink]="['/postagem-delete', item.id]">Deletar</a>
+                <ng-container *ngIf="item.foto != 'vazio' ">
+                  <img class=" img-fluid d-block mx-auto" src="{{item.foto}}"   alt="Imagem de capa do card">
+                </ng-container>
+
               </div>
 
           </div>

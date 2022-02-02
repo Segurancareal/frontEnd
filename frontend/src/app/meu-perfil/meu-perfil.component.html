@@ -2,49 +2,41 @@
 
 
 
-<div class="container-fluid bg-cz">
-  <div class="row bg-cz">
-      <div class="col-md-2 m-0">
+
+<div class="container-fluid ">
+  <div class="row">
+      <div class="col-md-4 m-0">
         <div class="card mt-5" style="width: 100%;">
           <img class="card-img-top rounded-circle" src="{{foto}}"
               alt="Imagem de capa do card">
           <div class="card-body">
               <h5 class="card-title">{{nome}}</h5>
           </div>
+          <p class="card-title text-center" >{{user.usuario}}</p>
+
           <ul class="list-group list-group-flush">
-              <li class="list-group-item"><a routerLink='/meuPerfil'><i class="fa fa-user" aria-hidden="true"></i>
-                Meu perfil</a></li>
-              <li class="list-group-item"><a [routerLink]="['/user-edit', id]"><i class="fa fa-cog" aria-hidden="true"></i> Editar perfil</a></li>
+              <li class="list-group-item"><a routerLink='/feed'><i class="fa fa-user" aria-hidden="true"></i>
+                Feed</a></li>
+              <li class="list-group-item"><a [routerLink]="['/usuario-edit', id]"><i class="fa fa-cog" aria-hidden="true"></i> Editar perfil</a></li>
 
           </ul>
       </div>
       </div>
       <div class="col-md-8  p d-flex justify-content-center flex-wrap">
-          <div *ngFor='let item of user.postagem | orderBy : key : reverse' class="card d-flex p-3 mt-5 rounded" style="width: 100rem;">
-              <p class="card-text"><small class="text-muted"></small></p>
-              <p class="card-text"><small class="text-muted">{{item.tema.descricao}}</small></p>
-              <img class="card-img-top" src="{{item.imgpost}}"   alt="Imagem de capa do card">
+          <div *ngFor='let item of user.postagem | orderBy : key : reverse' class="d-flex justify-content-center card p-3 mt-5 rounded" style="width: 100rem;">
+              <p class="card-text text-center"><small class="text-muted">{{item.tema.descricao}}</small></p>
+
+              <ng-container *ngIf="item.foto != 'vazio' ">
+                <img class="img-fluid d-block mx-auto" src="{{item.foto}}"   alt="Imagem de capa do card">
+              </ng-container>
+
               <div class="card-body">
-                  <h5 class="card-title">{{item.titulo}}</h5>
-                  <p class="card-text">{{item.nome}}</p>
-                  <p class="card-text"><small class="text-muted">{{item.hashtag}}</small></p>
-                  <a [routerLink]="['/postagem-edit', item.id]" class="text-info mr-3" href="">Editar</a>
-                  <a [routerLink]="['/postagem-delete', item.id]" class="text-danger" href="">Apagar</a>
+                  <h5 class="card-title text-center">{{item.titulo}}</h5>
+                  <p class="card-text text-center">{{item.nome}}</p>
+                  <p class="card-text text-center"><small class="text-muted">{{item.hashtag}}</small></p>
+                  <a [routerLink]="['/postagem-edit', item.id]" class="text-center text-info mr-3" href="">Editar</a>
+                  <a [routerLink]="['/postagem-delete', item.id]" class="text-danger text-center" href="">Apagar</a>
               </div>
-          </div>
-      </div>
-      <div class="col-md-2 mt-5 bg-cz">
-          <div class="list-group">
-              <button type="button" class="list-group-item list-group-item-action active">
-                  Cras justo odio
-              </button>
-              <button type="button" class="list-group-item list-group-item-action">Dapibus ac facilisis
-                  in</button>
-              <button type="button" class="list-group-item list-group-item-action">Morbi leo risus</button>
-              <button type="button" class="list-group-item list-group-item-action">Porta ac consectetur
-                  ac</button>
-              <button type="button" class="list-group-item list-group-item-action" disabled>Vestibulum at
-                  eros</button>
           </div>
       </div>
   </div>
