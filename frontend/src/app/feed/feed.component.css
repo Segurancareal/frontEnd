@@ -1,5 +1,5 @@
 .fundo {
-    background-color: #4a69bd;
+    background-color: #c7d6e4;
 }
 
 .texto {
@@ -47,4 +47,8 @@ ul li a:hover:before {
 
 ul li a:hover {
   color: #E09E27;
+}
+
+.box{
+  background-color: #E09E27;
 }

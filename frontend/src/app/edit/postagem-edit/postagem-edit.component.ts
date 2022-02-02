@@ -68,7 +68,10 @@ export class PostagemEditComponent implements OnInit {
   atualizar(){
     this.tema.id = this.idTema
     this.postagem.tema = this.tema
-    console.log(this.postagem)
+    
+    if(this.postagem.foto == '' || this.postagem.foto == null) {
+      this.postagem.foto = 'vazio'
+    }
 
     this.postagemService.putPostagem(this.postagem).subscribe((resp: Postagem) => {
       this.postagem = resp

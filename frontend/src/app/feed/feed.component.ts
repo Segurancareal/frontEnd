@@ -97,6 +97,10 @@ export class FeedComponent implements OnInit {
     this.user.id = this.idUser
     this.postagem.usuario = this.user
 
+    if(this.postagem.foto == '' || this.postagem.foto == null) {
+      this.postagem.foto = 'vazio'
+    }
+
     this.postagemService.postPostagem(this.postagem).subscribe((resp: Postagem) => {
       this.postagem = resp
       this.alertas.showAlertSuccess('Postagem Realizada com sucesso!')
