@@ -192,3 +192,72 @@ transform: translate(40px);
 transform: translate(0px);
 }
 
+.dev {
+    position : relative;
+    width : 260px;
+    display : flex;
+    align-items : center;
+    justify-content : center;
+    flex-wrap: warp;
+    padding : 0px;  
+  }
+  
+  .dev .card {
+    position: relative;
+    max-width : 300px;
+    height : 180px;  
+    background-color : #fff;
+    margin : 30px 10px;
+    padding : 20px 15px;
+    
+    display : flex;
+    flex-direction : column;
+    box-shadow : 0 5px 20px rgba(0,0,0,0.5);
+    transition : 0.3s ease-in-out;
+    border-radius : 15px;
+  }
+  .dev  .card:hover {
+    height : 280px;    
+  }
+  
+  
+  .dev  .card .image {
+    position : relative;
+    width : 200px;
+    height : 200px;
+    
+    top : -30%;
+    left: 0px;
+    box-shadow : 0 5px 20px rgba(0,0,0,0.2);
+    z-index : 1;
+  }
+  
+  .dev  .card .image img {
+    max-width : 100%;
+    border-radius : 15px;
+  }
+
+  .dev .card h3{
+    font-size: 20px;
+  }
+  
+  .dev .card .content {
+    position : relative;
+    top : -140px;
+    padding : 10px 15px;
+    color : #111;
+    text-align : center;
+    
+    visibility : hidden;
+    opacity : 0;
+    transition : 0.3s ease-in-out;
+      
+  }
+  
+  .dev .card:hover .content {
+     margin-top : 80px;
+     visibility : visible;
+     opacity : 1;
+     transition-delay: 0.2s;
+    
+  }
