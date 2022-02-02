@@ -1,7 +1,7 @@
 <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
 
-
-<div class="container-fluid bg-cz pl-5 pr-5">
+<div class="fundo texto">
+<div class="container-fluid pt-5 bg-cz pl-5 pr-5">
 
   <div class="row bg-cz">
 
@@ -20,7 +20,7 @@
                   <ul class="list-group list-group-flush" style="width: 100%;">
 
                     <li class="list-group-item">
-                      <a routerLink='/meuPerfil'><i class="fa fa-user" aria-hidden="true"></i> Meu perfil</a>
+                      <a routerLink='/meu-perfil'><i class="fa fa-user" aria-hidden="true"></i> Meu perfil</a>
                     </li>
 
                     <li class="list-group-item">
@@ -31,7 +31,7 @@
           </div>
       </div>
 
-      <div class="col-md-8 d-flex justify-content-center flex-wrap">
+      <div class="col-md-8 pt-5 d-flex justify-content-center flex-wrap">
 
           <!-- div para publicar e pesquisar -->
           <div class="col-lg-10 profile-col-main">
@@ -51,23 +51,18 @@
           </div>
 
           <!-- div rolagem infinita -->
-          <div *ngFor='let item of listaPostagens ' class="card d-flex p-4 mt-3 rounded bg-light" style="width: 700px" >
+          <div *ngFor='let item of listaPostagens | orderBy : key : reverse ' class="card d-flex p-4 mt-3 rounded bg-light" style="width: 700px" >
 
               <div class="card-body">
                 <h5 class="card-title"><img src="{{item.usuario.foto}}" width="45px" height="45px" class="circle"> {{item.usuario.nome}}</h5>
 
                 <p class="card-text"><small class="text-muted">{{item.tema.descricao}}</small></p>
 
-<<<<<<< HEAD
-                <p class="card-text"><small class="text-muted">{{item.data| date: 'dd/MM/yyyy'}} às {{item.data | date: 'HH:mm'}}</small></p>
-
-=======
                 <p class="card-text"><small class="text-muted">{{item.data| date: 'dd/MM/yyyy'}}</small></p>
-              
->>>>>>> c36de8bd8c2aca7598d4d6de6f52c3d21171f9cf
+
                 <h5 class="card-text">{{item.titulo}}</h5>
                 <p class="card-title">{{item.texto}}</p>
-                <p class="card-text"><small class="text-muted"></small></p>
+                <p class="card-text"><small class="text-muted">{{item.hashtag}}</small></p>
 
                 <img class="card-img-top" src="{{item.foto}}"   alt="Imagem de capa do card">
               </div>
@@ -81,17 +76,18 @@
 
       <div class="col-md-2 mt-5 bg-cz">
           <div class="list-group">
-            <table class="list-group-item list-group-item-action active bg-laranja">
+            <table class="list-group-item list-group-item-action active bg-amarelo">
               Temas mais populares
             </table>
 
-            <table *ngFor='let item of listaTemas' class="list-group-item list-group-item-action">
+            <table *ngFor='let item of listaTemas | orderBy : key : reverse' class="list-group-item list-group-item-action">
               {{item.descricao}}
             </table>
           </div>
       </div>
 
   </div>
+</div>
 </div>
 
 <!-- Modal para criar uma postagem-->

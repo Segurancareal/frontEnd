@@ -1,0 +1,62 @@
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+
+
+
+<div class="container-fluid bg-cz">
+  <div class="row bg-cz">
+      <div class="col-md-2 m-0">
+        <div class="card mt-5" style="width: 100%;">
+          <img class="card-img-top rounded-circle" src="{{foto}}"
+              alt="Imagem de capa do card">
+          <div class="card-body">
+              <h5 class="card-title">{{nome}}</h5>
+          </div>
+          <ul class="list-group list-group-flush">
+              <li class="list-group-item"><a routerLink='/meuPerfil'><i class="fa fa-user" aria-hidden="true"></i>
+                Meu perfil</a></li>
+              <li class="list-group-item"><a [routerLink]="['/user-edit', id]"><i class="fa fa-cog" aria-hidden="true"></i> Editar perfil</a></li>
+
+          </ul>
+      </div>
+      </div>
+      <div class="col-md-8  p d-flex justify-content-center flex-wrap">
+          <div *ngFor='let item of user.postagem | orderBy : key : reverse' class="card d-flex p-3 mt-5 rounded" style="width: 100rem;">
+              <p class="card-text"><small class="text-muted"></small></p>
+              <p class="card-text"><small class="text-muted">{{item.tema.descricao}}</small></p>
+              <img class="card-img-top" src="{{item.imgpost}}"   alt="Imagem de capa do card">
+              <div class="card-body">
+                  <h5 class="card-title">{{item.titulo}}</h5>
+                  <p class="card-text">{{item.nome}}</p>
+                  <p class="card-text"><small class="text-muted">{{item.hashtag}}</small></p>
+                  <a [routerLink]="['/postagem-edit', item.id]" class="text-info mr-3" href="">Editar</a>
+                  <a [routerLink]="['/postagem-delete', item.id]" class="text-danger" href="">Apagar</a>
+              </div>
+          </div>
+      </div>
+      <div class="col-md-2 mt-5 bg-cz">
+          <div class="list-group">
+              <button type="button" class="list-group-item list-group-item-action active">
+                  Cras justo odio
+              </button>
+              <button type="button" class="list-group-item list-group-item-action">Dapibus ac facilisis
+                  in</button>
+              <button type="button" class="list-group-item list-group-item-action">Morbi leo risus</button>
+              <button type="button" class="list-group-item list-group-item-action">Porta ac consectetur
+                  ac</button>
+              <button type="button" class="list-group-item list-group-item-action" disabled>Vestibulum at
+                  eros</button>
+          </div>
+      </div>
+  </div>
+</div>
+
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+  integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+  crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+  integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+  crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+  integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+  crossorigin="anonymous"></script>
