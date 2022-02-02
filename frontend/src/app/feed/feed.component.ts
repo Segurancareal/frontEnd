@@ -58,8 +58,7 @@ export class FeedComponent implements OnInit {
       this.router.navigate(['/login'])
     }
 
-    this.authService
-
+    this.authService.refreshToken()
     this.getAllTemas()
     this.getAllPostagens()
   }
