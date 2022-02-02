@@ -1,5 +1,32 @@
 @import url("https://fonts.googleapis.com/css2?family=Quicksand&display=swap");
 
+@import url('https://fonts.googleapis.com/css2? family= Rowdies:wght@300 & display=swap');
+
+.f-titulo{
+  font-family: 'Rowdies', cursiva;
+}
+
+.titulo-C{
+  font: size 600px;
+}
+
+.d-block{
+  width: 100%;
+  height: 100%;
+}
+
+.fd-60{
+  background-color: #f4f5b1;
+}
+
+.fd-61{
+  background-color: #b1e0e4;
+}
+
+.tl-am{
+  color: #133e6f;
+}
+
 .fundo {
   background-color: #133e6f;
 }
@@ -20,7 +47,7 @@ strong{
     font-size: 35pt;
     color: #c4302b;
     padding: 10px;
-  }
+}
 
 .yout:hover{
     color: #a1241f ;
@@ -191,4 +218,7 @@ transform: translate(40px);
 .link:hover .icon:nth-child(2) {
 transform: translate(0px);
 }
+
+
+
 
