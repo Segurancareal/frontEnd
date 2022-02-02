@@ -67,6 +67,9 @@
                 <ng-container *ngIf="item.foto != 'vazio' ">
                   <img class=" img-fluid d-block mx-auto" src="{{item.foto}}"   alt="Imagem de capa do card">
                 </ng-container>
+                <div class="d-flex justify-content-center mt-5">
+                  <a *ngIf="authService.adm()" [routerLink]="['/postagem-delete', item.id]" class="btn btn-danger" href="">Apagar</a>
+                </div>
 
               </div>
 
