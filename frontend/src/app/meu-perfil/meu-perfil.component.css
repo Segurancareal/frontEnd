@@ -1,11 +1,3 @@
-.fundo {
-    background-color: #4a69bd;
-}
-
-.texto {
-    color: #000000;
-}
-
 ul li a,
 ul li {
 
@@ -27,8 +19,8 @@ ul li a:before {
   height: 3px;
   bottom: 0;
   left: 0;
-  color: #E09E27;
-  background-color: #E09E27;
+  color: #022566;
+  background-color: #022566;
   visibility: hidden;
   -webkit-transform: scaleX(0);
   transform: scaleX(0);
@@ -37,7 +29,7 @@ ul li a:before {
 }
 
 ul li a:hover:before {
-  color: #E09E27;
+  color: #022566;
   text-decoration: underline;
   transition: 0.5s;
   visibility: visible;
@@ -46,5 +38,6 @@ ul li a:hover:before {
 }
 
 ul li a:hover {
-  color: #E09E27;
+  color: #022566;
 }
+
