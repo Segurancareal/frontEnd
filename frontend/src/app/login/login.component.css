@@ -6,6 +6,14 @@
     background-size:150%
 }
 
+.fundo2{
+  background-color: #133e6f;
+}
+
+.fundo2:hover{
+background-color: #5d86ac;
+}
+
 .formulario {
   width: 420px;
   height: 592px;
