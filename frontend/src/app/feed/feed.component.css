@@ -27,8 +27,8 @@ ul li a:before {
   height: 3px;
   bottom: 0;
   left: 0;
-  color: #E09E27;
-  background-color: #E09E27;
+  color: #133e6f;
+  background-color: #133e6f;
   visibility: hidden;
   -webkit-transform: scaleX(0);
   transform: scaleX(0);
@@ -37,7 +37,7 @@ ul li a:before {
 }
 
 ul li a:hover:before {
-  color: #E09E27;
+  color: #133e6f;
   text-decoration: underline;
   transition: 0.5s;
   visibility: visible;
@@ -46,9 +46,39 @@ ul li a:hover:before {
 }
 
 ul li a:hover {
-  color: #E09E27;
+  color: #133e6f;
 }
 
 .box{
-  background-color: #E09E27;
+  background-color: #133e6f;
 }
+
+.menuside{
+  border-radius: 10px !important;
+  background-color: #133e6f !important;
+}
+
+.menuside h5{
+  color: #fff;
+
+}
+
+.rolagem .card-body{
+  background-color: #fff;
+  border-radius: 30px !important;
+}
+
+.rolagem .card-body img {
+  border-radius: 10px;
+}
+
+.list-group .list-group-item{
+  margin-top: 5px !important;
+  margin-bottom: 5px !important;
+  border-radius: 10px;
+}
+
+.list-group-item{
+  width: 150px;
+}
+
