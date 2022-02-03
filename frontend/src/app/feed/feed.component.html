@@ -56,9 +56,9 @@
               <div class="card-body">
                 <h5 class="card-title"><img src="{{item.usuario.foto}}" width="45px" height="45px" class="circle"> {{item.usuario.nome}}</h5>
 
-                <p class="card-text"><small class="text-muted">{{item.tema.descricao}}</small></p>
+                <p class="card-text"><i class="fa fa-map-marker" aria-hidden="true"></i><small class="text-muted">{{item.tema.descricao}}</small></p>
 
-                <p class="card-text"><small class="text-muted">{{item.data| date: 'dd/MM/yyyy'}}</small></p>
+                <p class="card-text"><i class="fa fa-calendar" aria-hidden="true"></i><small class="text-muted">{{item.data| date: 'dd/MM/yyyy'}}</small></p>
 
                 <h5 class="card-text">{{item.titulo}}</h5>
                 <p class="card-title">{{item.texto}}</p>
@@ -71,6 +71,8 @@
                 <div>
                 <a class="like texto pt-5 ml-2" onclick=""><i class="fa fa-thumbs-o-up" aria-hidden="true"></i></a>
                 </div>
+                
+                <hr class="mb-2 mt-2">
 
                 <div class="d-flex justify-content-center mt-5">
                   <a *ngIf="authService.adm()" [routerLink]="['/postagem-delete', item.id]" class="btn btn-danger" href="">Apagar</a>
