@@ -21,7 +21,7 @@
 }
 
 .fd-61{
-  background-color: #DCEAF9;
+  background-color: #DCEBF9;
 }
 
 .tl-am{
@@ -120,7 +120,7 @@ h4 {
 }
 
 .sobrefundo{
-    background-color: whitesmoke;
+    background-color: #EEF5FC;
 }
 
 .fotofundo {
@@ -245,7 +245,7 @@ transform: translate(0px);
     border-radius : 15px;
   }
   .dev  .card:hover {
-    height : 390px;    
+    height : 390px;
   }
 
 

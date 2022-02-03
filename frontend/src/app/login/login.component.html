@@ -1,20 +1,20 @@
 <div class="fundo">
 <div class="container-fluid">
 
-  <div class="row d-flex justify-content-center p-3">
+  <div class="row d-flex justify-content-center p-3 font-weight-bold">
     <div class="col-md-6 d-flex justify-content-center" >
 
-      <div class="col-md-8 mb-5 mt-5 formulario border shadow">
+      <div class="col-md-8 mb-5 mt-5 formulario border shadow rounded">
 
-      <h1 class="text-center mb-3 mt-5">Entrar</h1>
+      <h1 class="text-center mb-3 mt-5 font-weight-bold texto">Entrar</h1>
 
-      <div class="form-group">
+      <div class="form-group texto">
         <label for="usuario">E-mail</label>
         <input [(ngModel)]="userLogin.usuario" class="form-control" type="text" name="usuario" id="usuario"
         placeholder="Digite seu Email">
       </div>
 
-      <div class="form-group">
+      <div class="form-group texto">
         <label for="senha">Senha</label>
         <input [(ngModel)]="userLogin.senha" class="form-control" type="password" name="senha" id="senha"
         placeholder="Sua senha">
@@ -28,7 +28,7 @@
 
       <hr class="mt-5 mb-5">
 
-      <p class="text-center"> Não tem uma conta? <a routerLink="/cadastro">Cadastre-se</a></p>
+      <p class="text-center texto"> Não tem uma conta? <a routerLink="/cadastro">Cadastre-se</a></p>
       <hr>
       <p class="text-center"><a routerLink="/inicio">Inicio</a> </p>
 

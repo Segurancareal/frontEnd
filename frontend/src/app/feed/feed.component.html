@@ -7,23 +7,20 @@
 
       <!-- Div do card do Perfil -->
       <div class="col-md-2 m-0">
-          <div class="card mt-5 d-flex justify-content-center align-items-center box" style="width: 100%;">
+          <div class=" menuside card mt-5 d-flex justify-content-center align-items-center box" style="width: 100%;">
 
             <img class=" card-img-top mt-2" src="{{foto}}" class="rounded mt-4"
                   alt="Imagem de perfil do usuário" style="width: 70% ">
 
-                  <div class="card-body bg-white">
-                    <h5 class="card-title">{{nome}}</h5>
-                    <p class="card-text"></p>
-                  </div>
+                    <h5 class="pt-3 card-title">{{nome}}</h5>
+                    
+                  <ul class="list-group d-block mx-auto list-group-flush mb-3" style="width: 100%;">
 
-                  <ul class="list-group list-group-flush" style="width: 100%;">
-
-                    <li class="list-group-item">
-                      <a routerLink='/meu-perfil'><i class="fa fa-user" aria-hidden="true"></i> Minhas postagens</a>
+                    <li class="list-group-item d-block mx-auto">
+                      <a routerLink='/meu-perfil' ><i class="fa fa-user" aria-hidden="true"></i> Minhas postagens</a>
                     </li>
 
-                    <li class="list-group-item">
+                    <li class="list-group-item d-block mx-auto">
                       <a [routerLink]="['/usuario-edit', id]"><i class="fa fa-cog" aria-hidden="true"></i> Editar perfil</a>
                     </li>
 
@@ -34,15 +31,15 @@
       <div class="col-md-8 d-flex justify-content-center flex-wrap">
 
           <!-- div para publicar e pesquisar -->
-          <div class="col-lg-10 profile-col-main">
+          <div class="col-lg-10 profile-col-main pt-5">
               <div class="panel ">
-                  <div class="panel-body">
+                  <div class="panel-body p-4 border box2 rounded">
 
-                      <textarea class="form-control mt-3 bd-redonda" rows="3" placeholder="Qual a ideia de hoje?" data-toggle="modal" data-target="#novaPostagem"></textarea>
+                      <textarea class="form-control mt-3 bd-redonda bgbox" rows="3" placeholder="Qual a ideia de hoje?" data-toggle="modal" data-target="#novaPostagem"></textarea>
 
                       <div class="form-group mt-5">
                         <input type="text"
-                        class="form-control bg-white" id="titulo"
+                        class="form-control bgbox" id="titulo"
                         placeholder="Digite um título de postagem para pesquisar" >
                       </div>
 
@@ -51,7 +48,7 @@
           </div>
 
           <!-- div rolagem infinita -->
-          <div *ngFor='let item of listaPostagens | orderBy : key : reverse ' class="card d-flex p-4 mt-3 rounded bg-light" style="width: 700px" >
+          <div *ngFor='let item of listaPostagens | orderBy : key : reverse ' class=" rolagem my-3" style="width: 600px" >
 
               <div class="card-body">
                 <h5 class="card-title"><img src="{{item.usuario.foto}}" width="45px" height="45px" class="circle"> {{item.usuario.nome}}</h5>
@@ -65,7 +62,7 @@
                 <p class="card-text"><small class="text-muted">{{item.hashtag}}</small></p>
 
                 <ng-container *ngIf="item.foto != 'vazio' ">
-                  <img class=" img-fluid d-block mx-auto" src="{{item.foto}}"   alt="Imagem de capa do card">
+                  <img class=" img-fluid d-block mx-auto" src="{{item.foto}}" styles=" border-radius: 30px;" alt="Imagem de capa do card">
                 </ng-container>
                 <div class="d-flex justify-content-center mt-5">
                   <a *ngIf="authService.adm()" [routerLink]="['/postagem-delete', item.id]" class="btn btn-danger" href="">Apagar</a>
@@ -76,9 +73,9 @@
           </div>
       </div>
 
-      <div class="col-md-2 mt-5 bg-cz">
-          <div class="list-group">
-            <table class="list-group-item list-group-item-action active bg-amarelo">
+      <div class="col-md-2 mt-5">
+          <div class="list-group font-weight-bold text-center">
+            <table class="list-group-item list-group-item-action active box">
               Temas mais populares
             </table>
 
@@ -96,7 +93,7 @@
 <div class="modal fade" id="novaPostagem" tabindex="-1" role="dialog" aria-labelledby="TituloModalCentralizado" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered" role="document">
 
-    <div class="modal-content">
+    <div class="modal-content fundo texto font-weight-bold">
       <div class="modal-header">
         <h5 class="modal-title" id="TituloModalCentralizado">Fazer Postagem</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
@@ -121,8 +118,8 @@
       </div>
 
       <div class="form-group">
-        <label for="img">Hashtag</label>
-        <input type="text"  class="form-control" id="hashtag" placeholder="Insira hashtags sobre o seu post">
+        <label for="img">Qual a Ocorrência</label>
+        <input type="text"  class="form-control" id="hashtag" placeholder="Descreve o tipo de ocorrência. ex: roubo">
       </div>
 
       <div class="form-group">
