@@ -62,6 +62,7 @@ ul li a:hover {
 
 .bgbox{
   background-color: #DCEBF9;
+  background-size: cover;
 }
 
 .bgbox:hover {
@@ -104,5 +105,14 @@ ul li a:hover {
 
 .list-group-item{
   width: 150px;
+}
+
+.like{
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.like:hover{
+  color: #133e6f;
 }
 
