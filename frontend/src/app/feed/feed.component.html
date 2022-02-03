@@ -1,9 +1,9 @@
 
 <div class="fundo texto">
-  <div class="container-fluid pl-5 pr-5 d-flex justify-content-center pb-5">
+  <div class="container-fluid  pb-5">
 
 
-  <div class="row">
+  <div class="row d-flex justify-content-around">
 
       <!-- Div do card do Perfil -->
       <div class="col-md-2 m-0">
@@ -50,7 +50,7 @@
           </div>
 
           <!-- div rolagem infinita -->
-          <div class="container d-flex justify-content-center flex-wrap ">
+          <div class="container d-flex justify-content-center flex-wrap w-100">
           <div *ngFor='let item of listaPostagens | orderBy : key : reverse ' class=" rolagem my-3" style="width: 600px" >
 
               <div class="card-body">
