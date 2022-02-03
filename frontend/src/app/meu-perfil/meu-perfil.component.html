@@ -6,7 +6,7 @@
 <div class="container-fluid fundo py-4 rounded">
   <div class="row">
 
-      <div class=" col-md-3 m-0">
+      <div class=" col-md-4 m-0">
         <div class="menuuser card mt-5 pb-2" style="width: 70%;">
           <img class="card-img-top rounded-circle p-3" src="{{foto}}"
               alt="Imagem de capa do card">
@@ -24,29 +24,25 @@
       </div>
       </div>
 
-      <div class="col-md-1">
-      </div>
-
-      <div class="  col-md-6  p d-flex justify-content-center flex-wrap">
+      <div class="  col-md-7  p d-flex justify-content-center flex-wrap">
 
         <div class=" container border mt-5">
           <h1 class="d-flex justify-content-center py-3">Minhas postagens</h1>
         </div>
 
           <div *ngFor='let item of user.postagem | orderBy : key : reverse' class=" menupost d-flex justify-content-center card p-3 mt-5 rounded" style="width: 50rem;">
-              <p class="card-text text-center"><small class="text-muted">{{item.tema.descricao}}</small></p>
-              <p class="card-text"><small class="text-muted">{{item.data| date: 'dd/MM/yyyy'}}</small></p>
-              <p class="card-text text-center"><small class="text-muted">{{item.hashtag}}</small></p>
+              <p class="card-text text-center font-weight-bold"><small class="text-muted">{{item.tema.descricao}}</small></p>
+              <p class="card-text text-center"><small class="text-muted">{{item.data| date: 'dd/MM/yyyy'}}</small></p>
+              <h5 class="card-title text-center">{{item.titulo}}</h5>
 
-
+              <p class="card-title text-center">{{item.texto}}</p>
               <ng-container *ngIf="item.foto != 'vazio' ">
-                <img class="img-fluid d-block mx-auto" src="{{item.foto}}"   alt="Imagem de capa do card">
+                <img class=" d-block mx-auto" src="{{item.foto}}"   alt="Imagem de capa do card">
               </ng-container>
             
 
 
               <div class="card-body text-center">
-                  <h5 class="card-title text-center">{{item.titulo}}</h5>
                   <p class="card-text text-center">{{item.nome}}</p>
                   <p class="card-text text-center"><small class="text-muted">{{item.hashtag}}</small></p>
                   <div class="d-flex justify-content-center">
@@ -57,9 +53,6 @@
           </div>
       </div>
 
-      <div class="col-md-2">
-
-      </div>
 
   </div>
 </div>

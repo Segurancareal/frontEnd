@@ -10,6 +10,8 @@
     color: #000000;
 }
 
+
+
 ul li a,
 ul li {
 
@@ -56,6 +58,14 @@ ul li a:hover {
 
 .box{
   background-color: #133e6f;
+}
+
+.bgbox{
+  background-color: #DCEBF9;
+}
+
+.bgbox:hover {
+  background-color: whitesmoke;
 }
 
 .menuside{
