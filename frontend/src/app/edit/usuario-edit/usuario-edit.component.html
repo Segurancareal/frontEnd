@@ -1,62 +1,69 @@
 <div class="fundo">
     <div class="container-fluid pt-5 pb-5">
-    
-        <div class="row">
-            <div class="col-md-12">
-                <h1 class="text-center texto fonteTerror">Atualize seu Perfil</h1>
+        <div class="container">
+
+            <div class="row">
+                <div class="col-md-12">
+                    <h1 class="text-center texto fonteTerror text-light pt-4">Atualize seu Perfil</h1>
+                </div>
             </div>
-        </div>
-                
-                <div class="row d-flex justify-content-center texto fonteTexto font-weight-bold ">
-                    <div class="col-md-6 p-5">
-    
-                        <form>
+
+            <div class="row d-flex justify-content-center texto fonteTexto font-weight-bold ">
+                <div class="col-md-6 p-5">
+
+                    <form>
                         <div class="form-group">
-                            <label for="nome">Nome</label>
-                            <input [(ngModel)]="usuario.nome" class="form-control" type="text" name="nome" id="nome" placeholder="Seu nome"  >
-    
+                            <label class="text-light" for="nome">Nome</label>
+                            <input [(ngModel)]="usuario.nome" class="form-control" type="text" name="nome" id="nome"
+                                placeholder="Seu nome">
+
                         </div>
-    
+
                         <div class="form-group">
-                            <label for="usuario">Email</label>
-                            <input [(ngModel)]="usuario.usuario" class="form-control" type="email" name="usuario" id="usuario" placeholder="Digite seu Email">
-    
+                            <label class="text-light" for="usuario">Email</label>
+                            <input [(ngModel)]="usuario.usuario" class="form-control" type="email" name="usuario"
+                                id="usuario" placeholder="Digite seu Email">
+
                         </div>
-    
+
                         <div class="form-group">
-                            <label for="foto">Link da Foto</label>
-                            <input [(ngModel)]="usuario.foto" class="form-control" type="text" name="foto" id="foto" placeholder="Link da sua foto">
-    
+                            <label class="text-light" for="foto">Link da Foto</label>
+                            <input [(ngModel)]="usuario.foto" class="form-control" type="text" name="foto" id="foto"
+                                placeholder="Link da sua foto">
+
                         </div>
-    
+
                         <div class="form-group">
-                            <label for="senha">Senha</label>
-                            <input (input)="confirmSenha($event)"  class="form-control" type="password" name="senha" id="senha" placeholder="Senha no minimo de 6 dígitos">
-    
+                            <label class="text-light" for="senha">Senha</label>
+                            <input (input)="confirmSenha($event)" class="form-control" type="password" name="senha"
+                                id="senha" placeholder="Senha no minimo de 6 dígitos">
+
                         </div>
-    
+
                         <div class="form-group">
-                            <label for="confirmSenha">Confirmar senha</label>
-                            <input [(ngModel)]="usuario.senha" class="form-control" type="password" name="confirmSenha" id="confirmSenha" placeholder="Confirme sua senha">
-    
+                            <label class="text-light" for="confirmSenha">Confirmar senha</label>
+                            <input [(ngModel)]="usuario.senha" class="form-control" type="password" name="confirmSenha"
+                                id="confirmSenha" placeholder="Confirme sua senha">
+
                         </div>
-    
+
                         <div class="form-group">
-                            <label for="tipo">Tipo de usuário</label>
+                            <label class="text-light" for="tipo">Tipo de usuário</label>
                             <select class="form-control" name="tipo" id="tipo" (change)="tipoUsuario($event)">
                                 <option>Selecione um tipo de usuário:</option>
                                 <option value="normal">Normal</option>
                                 <option value="adm">Administrador</option>
                             </select>
                         </div>
-    
+
                         <div class="d-flex justify-content-center form-group">
                             <button type="submit" class="btn btn-danger mr-4" routerLink="/feed">Cancelar</button>
-                            <button type="submit" class="btn btn-success mr-4" (click)="atualizar()" >Atualizar</button>
+                            <button type="submit" class="btn btn-success mr-4" (click)="atualizar()">Atualizar</button>
                         </div>
                     </form>
-                        
-                    </div>
+
                 </div>
             </div>
         </div>
+    </div>
+</div>
