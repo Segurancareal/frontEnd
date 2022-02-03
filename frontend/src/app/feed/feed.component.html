@@ -42,7 +42,7 @@
                       <div class="form-group mt-5">
                         <input type="text"
                         class="form-control bgbox" id="titulo"
-                        placeholder="Digite um título de postagem para pesquisar" >
+                        placeholder="Digite um título de postagem para pesquisar" [(ngModel)]="tituloPost" (keyup)="findByTituloPostagem()">
                       </div>
 
                   </div>
