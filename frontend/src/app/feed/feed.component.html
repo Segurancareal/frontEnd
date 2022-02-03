@@ -31,7 +31,7 @@
       <div class="col-md-8 d-flex justify-content-center flex-wrap">
 
           <!-- div para publicar e pesquisar -->
-          <div class="col-lg-10 profile-col-main pt-5">
+          <div class="container col-lg-10 profile-col-main pt-5">
               <div class="panel ">
                   <div class="panel-body p-4 border box2 rounded">
 
@@ -48,6 +48,7 @@
           </div>
 
           <!-- div rolagem infinita -->
+          <div class="container d-flex justify-content-center flex-wrap ">
           <div *ngFor='let item of listaPostagens | orderBy : key : reverse ' class=" rolagem my-3" style="width: 600px" >
 
               <div class="card-body">
@@ -65,7 +66,9 @@
                   <img class=" img-fluid d-block mx-auto" src="{{item.foto}}" styles=" border-radius: 30px;" alt="Imagem de capa do card">
                 </ng-container>
 
-                <a class="like texto mr-5" onclick=""><i class="fa fa-thumbs-o-up" aria-hidden="true"></i></a>
+                <div>
+                <a class="like texto pt-5 ml-2" onclick=""><i class="fa fa-thumbs-o-up" aria-hidden="true"></i></a>
+                </div>
 
                 <div class="d-flex justify-content-center mt-5">
                   <a *ngIf="authService.adm()" [routerLink]="['/postagem-delete', item.id]" class="btn btn-danger" href="">Apagar</a>
@@ -74,6 +77,7 @@
               </div>
 
           </div>
+      </div>
       </div>
 
       <div class="col-md-2 mt-5">
