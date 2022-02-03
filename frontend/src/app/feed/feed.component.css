@@ -47,6 +47,7 @@ ul li a:hover:before {
 
 ul li a:hover {
   color: #133e6f;
+
 }
 
 .box{
@@ -56,11 +57,20 @@ ul li a:hover {
 .menuside{
   border-radius: 10px !important;
   background-color: #133e6f !important;
+  width: 240px !important;
 }
 
 .menuside h5{
   color: #fff;
 
+}
+
+.menuside li{
+  width: 220px !important;
+}
+
+.menuside  li a{
+  width: 200px !important;
 }
 
 .rolagem .card-body{
