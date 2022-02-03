@@ -3,27 +3,36 @@
 
 
 
-<div class="container-fluid ">
+<div class="container-fluid fundo py-4">
+
+  
+  
   <div class="row">
-      <div class="col-md-4 m-0">
-        <div class="card mt-5" style="width: 100%;">
-          <img class="card-img-top rounded-circle" src="{{foto}}"
+
+      <div class=" col-md-4 m-0">
+        <div class="menuuser card mt-5 pb-2" style="width: 70%;">
+          <img class="card-img-top rounded-circle p-3" src="{{foto}}"
               alt="Imagem de capa do card">
           <div class="card-body">
-              <h5 class="card-title">{{nome}}</h5>
+              <h5 class="card-title text-center text-light ">{{nome}}</h5>
           </div>
-          <p class="card-title text-center" >{{user.usuario}}</p>
+          <p class="card-title text-center text-light" >{{user.usuario}}</p>
 
           <ul class="list-group list-group-flush">
-              <li class="list-group-item"><a routerLink='/feed'><i class="fa fa-user" aria-hidden="true"></i>
+              <li class="list-group-item mb-3"><a routerLink='/feed'><i class="fa fa-user" aria-hidden="true"></i>
                 Feed</a></li>
-              <li class="list-group-item"><a [routerLink]="['/usuario-edit', id]"><i class="fa fa-cog" aria-hidden="true"></i> Editar perfil</a></li>
+              <li class="list-group-item mb-3"><a [routerLink]="['/usuario-edit', id]"><i class="fa fa-cog" aria-hidden="true"></i> Editar perfil</a></li>
 
           </ul>
       </div>
       </div>
-      <div class="col-md-8  p d-flex justify-content-center flex-wrap">
-          <div *ngFor='let item of user.postagem | orderBy : key : reverse' class="d-flex justify-content-center card p-3 mt-5 rounded" style="width: 100rem;">
+      <div class="  col-md-8  p d-flex justify-content-center flex-wrap">
+
+        <div class=" container border mt-5">
+          <h1 class="d-flex justify-content-center py-3">Minhas postagens</h1>
+        </div>
+
+          <div *ngFor='let item of user.postagem | orderBy : key : reverse' class=" menupost d-flex justify-content-center card p-3 mt-5 rounded" style="width: 50rem;">
               <p class="card-text text-center"><small class="text-muted">{{item.tema.descricao}}</small></p>
 
               <ng-container *ngIf="item.foto != 'vazio' ">
@@ -34,9 +43,11 @@
                   <h5 class="card-title text-center">{{item.titulo}}</h5>
                   <p class="card-text text-center">{{item.nome}}</p>
                   <p class="card-text text-center"><small class="text-muted">{{item.hashtag}}</small></p>
-                  <a [routerLink]="['/postagem-edit', item.id]" class="text-center text-info mr-3" href="">Editar</a>
+                  <div class="d-flex justify-content-center">
+                  <a [routerLink]="['/postagem-edit', item.id]" class="text-center text-info mr-3 "  href="">Editar</a>
                   <a [routerLink]="['/postagem-delete', item.id]" class="text-danger text-center" href="">Apagar</a>
-              </div>
+                </div>
+                </div>
           </div>
       </div>
   </div>

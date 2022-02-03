@@ -41,3 +41,31 @@ ul li a:hover {
   color: #022566;
 }
 
+.fundo {
+  background-color: #DCEBF9;
+}
+
+.container{
+  border: #000;
+  background-color: #022566;
+  border-radius: 15px;
+}
+
+.container h1{
+  color: #fbc531 ;
+}
+
+.menuuser{
+  border-radius: 15px !important;
+  background-color: #022566;
+}
+
+.menupost{
+  border-radius: 15px !important;
+}
+
+.list-group-item{
+  border-radius: 10px !important;
+  width: 250px !important;
+  margin-left: 20px;
+}
