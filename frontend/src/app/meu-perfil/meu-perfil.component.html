@@ -3,16 +3,16 @@
 
 
 
-<div class="container-fluid ">
+<div class="container-fluid pb-5 fundo rounded">
   <div class="row">
-      <div class="col-md-4 m-0">
-        <div class="card mt-5" style="width: 100%;">
+      <div class="col-md-3 m-0">
+        <div class="card mt-5 p-3" style="width: 100%;">
           <img class="card-img-top rounded-circle" src="{{foto}}"
               alt="Imagem de capa do card">
           <div class="card-body">
-              <h5 class="card-title">{{nome}}</h5>
+              <h5 class="card-title text-center">{{nome}}</h5>
           </div>
-          <p class="card-title text-center" >{{user.usuario}}</p>
+          <p class="card-title text-center">{{user.usuario}}</p>
 
           <ul class="list-group list-group-flush">
               <li class="list-group-item"><a routerLink='/feed'><i class="fa fa-user" aria-hidden="true"></i>
@@ -22,23 +22,38 @@
           </ul>
       </div>
       </div>
-      <div class="col-md-8  p d-flex justify-content-center flex-wrap">
+
+      <div class="col-md-1">
+
+      </div>
+
+      <div class="col-md-6  p d-flex justify-content-center flex-wrap text-center rounded">
           <div *ngFor='let item of user.postagem | orderBy : key : reverse' class="d-flex justify-content-center card p-3 mt-5 rounded" style="width: 100rem;">
               <p class="card-text text-center"><small class="text-muted">{{item.tema.descricao}}</small></p>
+              <p class="card-text"><small class="text-muted">{{item.data| date: 'dd/MM/yyyy'}}</small></p>
+              <p class="card-text text-center"><small class="text-muted">{{item.hashtag}}</small></p>
+
 
               <ng-container *ngIf="item.foto != 'vazio' ">
                 <img class="img-fluid d-block mx-auto" src="{{item.foto}}"   alt="Imagem de capa do card">
               </ng-container>
+            
 
-              <div class="card-body">
+
+              <div class="card-body text-center">
                   <h5 class="card-title text-center">{{item.titulo}}</h5>
                   <p class="card-text text-center">{{item.nome}}</p>
-                  <p class="card-text text-center"><small class="text-muted">{{item.hashtag}}</small></p>
+                  <p class="card-title">{{item.texto}}</p>
                   <a [routerLink]="['/postagem-edit', item.id]" class="text-center text-info mr-3" href="">Editar</a>
                   <a [routerLink]="['/postagem-delete', item.id]" class="text-danger text-center" href="">Apagar</a>
               </div>
           </div>
       </div>
+
+      <div class="col-md-2">
+
+      </div>
+
   </div>
 </div>
 
