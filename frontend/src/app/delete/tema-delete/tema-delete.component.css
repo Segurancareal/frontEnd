@@ -2,8 +2,11 @@
     background-color: #DCEBF9;
 }
 .container-fluid{
-    background-color: #fff;
     min-height: 100vh;
+}
+
+.border{
+    color: whitesmoke;
 }
 
 .container{
