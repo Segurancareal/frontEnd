@@ -33,6 +33,10 @@ export class CadastroComponent implements OnInit {
     this.tipoUser = event.target.value
   }
 
+  usuarioCadastrado(event: any) {
+    this.usuario = event.target.value
+  }
+
   cadastrar(){
     this.usuario.tipo = this.tipoUser
 
@@ -47,6 +51,10 @@ export class CadastroComponent implements OnInit {
         this.alertas.showAlertSuccess("Usuário Cadastrado com sucesso!")
       }) 
 
+    }
+
+    if(this.usuarioCadastrado == this.usuarioCadastrado){
+      this.alertas.showAlertWarning("Email Já Cadastrado")
     }
 
   }
