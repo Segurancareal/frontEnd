@@ -53,10 +53,6 @@ export class CadastroComponent implements OnInit {
 
     }
 
-    if(this.usuarioCadastrado == this.usuarioCadastrado){
-      this.alertas.showAlertWarning("Email Já Cadastrado")
-    }
-
   }
 
 }
