@@ -17,7 +17,7 @@ export class MenufeedComponent implements OnInit {
   constructor(private router : Router) { }
 
   ngOnInit() {
-   window.scroll(0,0)
+  window.scroll(0,0)
   }
 
   deslogar(){

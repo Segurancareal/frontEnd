@@ -15,7 +15,7 @@
                   <hr>
 
                     <h5 class="pt-3 card-title">{{nome}}</h5>
-                    
+
                   <ul class="list-group d-block mx-auto list-group-flush mb-3" style="width: 100%;">
 
                     <li class="list-group-item d-block mx-auto">
@@ -58,15 +58,13 @@
                 <h5 class="card-title"><img src="{{item.usuario.foto}}" width="45px" height="45px" class="circle">  {{item.usuario.nome}}</h5>
                 <p class="card-text"><i class="fa fa-calendar" aria-hidden="true"> </i><small class="text-muted"> {{item.data| date: 'dd/MM/yyyy'}} </small></p>
                 </div>
-                <hr class="pt-2"> 
+                <hr class="pt-2">
 
                 <p class="card-text"><i class="fa fa-map-marker" aria-hidden="true"> </i><small class="text-muted">  {{item.tema.descricao}} </small></p>
                 <p class="card-text"><i class="fa fa-exclamation-circle" aria-hidden="true"></i>
                   <small class="text-muted">  {{item.tema.hashtag}} </small></p>
                 <p class="card-text"><i class="fa fa-street-view" aria-hidden="true"></i>
                   <small class="text-muted">  {{item.tema.assunto}} </small></p>
-
-               
 
                 <h5 class="card-text">{{item.titulo}}</h5>
                 <p class="card-title">{{item.texto}}</p>
@@ -81,7 +79,7 @@
                 <div>
                 <a class="like texto pt-5 ml-2" onclick=""><i class="fa fa-thumbs-o-up" aria-hidden="true"></i></a>
                 </div>
-                
+
 
                 <!-- <div class="d-flex justify-content-center mt-5">
                   <a *ngIf="authService.adm()" [routerLink]="['/postagem-delete', item.id]" class="btn btn-danger" href="">Apagar</a>
