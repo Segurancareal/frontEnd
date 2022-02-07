@@ -41,17 +41,7 @@ html {
 }
 
 strong{
-    color: #fbc531;
-}
-
-.yout{
-    font-size: 35pt;
-    color: #c4302b;
-    padding: 10px;
-}
-
-.yout:hover{
-    color: #a1241f ;
+    color: #e6b327;
 }
 
 .ods{
@@ -105,12 +95,12 @@ h4 {
 
 .icon{
     font-size: 30pt;
-    color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
     padding: 10px;
 }
 
 .fa-github-square:hover {
-    color: rgb(80, 80, 80);
+    color: rgb(0, 0, 0);
 }
     .bgdev{
     background-color: #1f5ca1;
@@ -138,10 +128,6 @@ box-shadow: -3px -2px 5px 6px rgba(19,62,111,0.88);
     text-decoration: underline;
     color: #fbc531;
 
-}
-
-* {
-    box-sizing: border-box;
 }
 
 body {
@@ -220,72 +206,232 @@ transform: translate(40px);
 transform: translate(0px);
 }
 
-.dev {
-    position : relative;
-    width : 260px;
-    display : flex;
-    align-items : center;
-    justify-content : center;
-    flex-wrap: warp;
-    padding : 0px;
-  }
+/* Efeitos de card  */
 
-  .dev .card {
-    position: relative;
-    max-width : 300px;
-    height : 180px;
-    background-color : #fff;
-    margin : 30px 10px;
-    padding : 20px 15px;
-
-    display : flex;
-    flex-direction : column;
-    box-shadow : 0 5px 20px rgba(0,0,0,0.5);
-    transition : 0.3s ease-in-out;
-    border-radius : 15px;
-  }
-  .dev  .card:hover {
-    height : 390px;
-  }
+@import url("https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900");
 
 
-  .dev  .card .image {
-    position : relative;
-    width : 200px;
-    height : 200px;
+body {
+  font-family: "Lato";
+}
 
-    top : -30%;
-    left: 0px;
-    box-shadow : 0 5px 20px rgba(0,0,0,0.2);
-    z-index : 1;
-  }
+.wrapper {
+  width: 100%;
+  height: 100vh;
+  background: #EEF5FC;
+  display: flex;
+}
 
-  .dev  .card .image img {
-    max-width : 100%;
-    border-radius : 15px;
-  }
+.card {
+  width: 200px;
+  height: 350px;
+  background: url(../../assets/img/Wesley.jpeg) no-repeat center/cover;
+  margin: auto;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
 
-  .dev .card h3{
-    font-size: 20px;
-  }
+.card2{
+  width: 200px;
+  height: 350px;
+  background: url(../../assets/img/eu_mais_recente2.jpg) no-repeat center/cover;
+  margin: auto;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
 
-  .dev .card .content {
-    position : relative;
-    top : -140px;
-    padding : 10px 15px;
-    color : #111;
-    text-align : center;
+.card3{
+  width: 200px;
+  height: 350px;
+  background: url(../../assets/img/joao.jpeg) no-repeat center/cover;
+  margin: auto;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
 
-    visibility : hidden;
-    opacity : 0;
-    transition : 0.3s ease-in-out;
+.card4{
+  width: 200px;
+  height: 350px;
+  background: url(../../assets/img/foto_rino.png) no-repeat center/cover;
+  margin: auto;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
 
-  }
+.card5{
+  width: 200px;
+  height: 350px;
+  background: url(../../assets/img/gusreis.jpg) no-repeat center/cover;
+  margin: auto;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
 
-  .dev .card:hover .content {
-    margin-top : 80px;
-    visibility : visible;
-    opacity : 1;
-    transition-delay: 0.2s;
+/* card 1 */
 
-  }
+.card:hover .fon {
+  opacity: 0;
+}
+.card:hover .text {
+  height: 10%;
+  padding: 10px 0 0;
+}
+.card:hover .text h2 {
+  margin-bottom: 0;
+}
+.card:hover .text p {
+  opacity: 0;
+}
+.card:hover .btn {
+  transform: scale(1);
+}
+
+/* card 2 */
+
+.card2:hover .fon {
+  opacity: 0;
+}
+.card2:hover .text {
+  height: 10%;
+  padding: 10px 0 0;
+}
+.card2:hover .text h2 {
+  margin-bottom: 0;
+}
+.card2:hover .text p {
+  opacity: 0;
+}
+.card2:hover .btn {
+  transform: scale(1);
+}
+
+/* card 3 */
+
+.card3:hover .fon {
+  opacity: 0;
+}
+.card3:hover .text {
+  height: 10%;
+  padding: 10px 0 0;
+}
+.card3:hover .text h2 {
+  margin-bottom: 0;
+}
+.card3:hover .text p {
+  opacity: 0;
+}
+.card3:hover .btn {
+  transform: scale(1);
+}
+
+/* card 4 */
+
+.card4:hover .fon {
+  opacity: 0;
+}
+.card4:hover .text {
+  height: 10%;
+  padding: 10px 0 0;
+}
+.card4:hover .text h2 {
+  margin-bottom: 0;
+}
+.card4:hover .text p {
+  opacity: 0;
+}
+.card4:hover .btn {
+  transform: scale(1);
+}
+
+.card5:hover .fon {
+  opacity: 0;
+}
+.card5:hover .text {
+  height: 10%;
+  padding: 10px 0 0;
+}
+.card5:hover .text h2 {
+  margin-bottom: 0;
+}
+.card5:hover .text p {
+  opacity: 0;
+}
+.card5:hover .btn {
+  transform: scale(1);
+}
+
+.fon {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #000;
+  opacity: 0.3;
+  z-index: 2;
+  transition: opacity 0.25s;
+}
+
+.text {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  background: whitesmoke;
+  height: 60%;
+  width: 100%;
+  text-align: center;
+  padding: 30px 0 0;
+  z-index: 4;
+  transition: height 0.25s, padding 0.25s;
+}
+.text h2 {
+  text-transform: capitalize;
+  color: #133e6f;
+  letter-spacing: 1px;
+  margin-bottom: 15px;
+  transition: margin-bottom 0.25s;
+  font-size: 20px;
+}
+.text p {
+  line-height: 20px;
+  margin: 0 10px;
+  color: rgb(0, 0, 0);
+  z-index: 5;
+  transition: opacity 0.25s;
+}
+.text .triangle {
+  width: 100%;
+  height: 50px;
+  background: whitesmoke;
+  z-index: 9;
+  transform: matrix(1.01, -0.3, 0, 2, -1, 10);
+  z-index: 3;
+}
+
+*{
+  box-sizing: border-box;
+}
+
+.btn {
+  position: absolute;
+  top: calc(93% - 20px);
+  left: calc(25% - 40px);
+  margin: auto;
+  width: 80px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  z-index: 4;
+  transform: scale(0);
+  cursor: pointer;
+}
