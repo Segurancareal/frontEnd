@@ -33,7 +33,7 @@
       <div class="col-md-8 d-flex justify-content-center flex-wrap">
 
           <!-- div para publicar e pesquisar -->
-          <div class="container col-lg-10 profile-col-main pt-5">
+          <div class="container col-lg-10 profile-col-main pt-5 rounded">
               <div class="panel ">
                   <div class="panel-body p-4 border box2 rounded">
 
@@ -76,8 +76,12 @@
 
                 <hr class="pb-2 pt-2">
 
-                <div>
-                <a class="like texto pt-5 ml-2" onclick=""><i class="fa fa-thumbs-o-up" aria-hidden="true"></i></a>
+                <div class="d-flex justify-content-between">
+                  <a class="btn no-wrap like texto ml-2">
+                <i onclick="contador()" class="mt-2 fa fa-thumbs-o-up" aria-hidden="true"></i>
+                7
+                </a>
+                <input type="text" class="bgbox form-control rounded mt-2 mb-2 w-75" id="comentario" placeholder="Escreva um comentário">
                 </div>
 
 

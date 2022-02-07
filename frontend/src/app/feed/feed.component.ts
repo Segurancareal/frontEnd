@@ -39,6 +39,8 @@ export class FeedComponent implements OnInit {
   nome = environment.nome
   foto = environment.foto
 
+  click: number
+
   //ordena as postagens
   key = 'data'
   reverse = true
@@ -141,5 +143,13 @@ export class FeedComponent implements OnInit {
       })
     }
   }
+
+contador () {
+  var click = 0
+  for (var i = 0; i < 100; i++) {
+  click = (i + 1)
+  
+  }
+}
 
 }

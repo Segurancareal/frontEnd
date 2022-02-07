@@ -109,10 +109,14 @@ ul li a:hover {
 
 .like{
     text-decoration: none;
-    font-size: 20px;
+    font-size: 25px;
+    cursor: pointer;
+    user-select: none;
 }
 
 .like:hover{
   color: #133e6f;
 }
+
+
 
