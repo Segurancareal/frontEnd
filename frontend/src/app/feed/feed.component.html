@@ -15,7 +15,7 @@
                   <hr>
 
                     <h5 class="pt-3 card-title">{{nome}}</h5>
-                    
+
                   <ul class="list-group d-block mx-auto list-group-flush mb-3" style="width: 100%;">
 
                     <li class="list-group-item d-block mx-auto">
@@ -54,11 +54,17 @@
           <div *ngFor='let item of listaPostagens | orderBy : key : reverse ' class=" rolagem my-3" style="width: 600px" >
 
               <div class="card-body">
-                <h5 class="card-title"><img src="{{item.usuario.foto}}" width="45px" height="45px" class="circle"> {{item.usuario.nome}}</h5>
+                <div class="d-flex justify-content-between ">
+                <h5 class="card-title"><img src="{{item.usuario.foto}}" width="45px" height="45px" class="circle">  {{item.usuario.nome}}</h5>
+                <p class="card-text"><i class="fa fa-calendar" aria-hidden="true"> </i><small class="text-muted"> {{item.data| date: 'dd/MM/yyyy'}} </small></p>
+                </div>
+                <hr class="pt-2">
 
-                <p class="card-text"><small class="text-muted">{{item.tema.descricao}}</small></p>
-
-                <p class="card-text"><small class="text-muted">{{item.data| date: 'dd/MM/yyyy'}}</small></p>
+                <p class="card-text"><i class="fa fa-map-marker" aria-hidden="true"> </i><small class="text-muted">  {{item.tema.descricao}} </small></p>
+                <p class="card-text"><i class="fa fa-exclamation-circle" aria-hidden="true"></i>
+                  <small class="text-muted">  {{item.tema.hashtag}} </small></p>
+                <p class="card-text"><i class="fa fa-street-view" aria-hidden="true"></i>
+                  <small class="text-muted">  {{item.tema.assunto}} </small></p>
 
                 <h5 class="card-text">{{item.titulo}}</h5>
                 <p class="card-title">{{item.texto}}</p>
@@ -68,13 +74,16 @@
                   <img class=" img-fluid d-block mx-auto" src="{{item.foto}}" styles=" border-radius: 30px;" alt="Imagem de capa do card">
                 </ng-container>
 
+                <hr class="pb-2 pt-2">
+
                 <div>
                 <a class="like texto pt-5 ml-2" onclick=""><i class="fa fa-thumbs-o-up" aria-hidden="true"></i></a>
                 </div>
 
-                <div class="d-flex justify-content-center mt-5">
+
+                <!-- <div class="d-flex justify-content-center mt-5">
                   <a *ngIf="authService.adm()" [routerLink]="['/postagem-delete', item.id]" class="btn btn-danger" href="">Apagar</a>
-                </div>
+                </div> -->
 
               </div>
 
@@ -127,8 +136,8 @@
       </div>
 
       <div class="form-group">
-        <label for="img">Qual a Ocorrência</label>
-        <input type="text"  class="form-control" id="hashtag" placeholder="Descreve o tipo de ocorrência. ex: roubo">
+        <label for="img">Digite uma hashtag</label>
+        <input type="text"  class="form-control" id="hashtag" placeholder="#Hashtag">
       </div>
 
       <div class="form-group">
