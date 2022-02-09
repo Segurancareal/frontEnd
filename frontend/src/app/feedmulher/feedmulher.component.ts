@@ -4,17 +4,17 @@ import { environment } from 'src/environments/environment.prod';
 import { Postagem } from '../model/Postagem';
 import { Tema } from '../model/Tema';
 import { Usuario } from '../model/Usuario';
-import { AuthService } from '../service/auth.service';
-import { TemaService } from '../service/tema.service';
-import { PostagemService } from '../service/postagem.service';
 import { AlertasService } from '../service/alertas.service';
+import { AuthService } from '../service/auth.service';
+import { PostagemService } from '../service/postagem.service';
+import { TemaService } from '../service/tema.service';
 
 @Component({
-  selector: 'app-feed',
-  templateUrl: './feed.component.html',
-  styleUrls: ['./feed.component.css']
+  selector: 'app-feedmulher',
+  templateUrl: './feedmulher.component.html',
+  styleUrls: ['./feedmulher.component.css']
 })
-export class FeedComponent implements OnInit {
+export class FeedmulherComponent implements OnInit {
 
   postagem: Postagem = new Postagem()
   listaPostagens: Postagem[]
