@@ -49,22 +49,23 @@
                 </div>
             </div>
 
+            <!-- Publicação única mulheres -->
             <!-- div rolagem infinita -->
             <div class="container d-flex justify-content-center flex-wrap w-75">
-            <div *ngFor='let item of listaPostagens | orderBy : key : reverse ' class=" rolagem my-3" style="width: 600px" >
+            <div  class=" rolagem my-3" style="width: 600px" >
 
                 <div class="card-body">
                   <div class="d-flex justify-content-between ">
                   <h5 class="card-title"><img src="../../assets/img/mariana.jpg" width="45px" height="45px" class="circle img-fluid">  Mariana Elena</h5>
-                  <p class="card-text"><i class="fa fa-calendar" aria-hidden="true"> </i><small class="text-muted"> {{item.data| date: 'dd/MM/yyyy'}} </small></p>
+                  <p class="card-text"><i class="fa fa-calendar" aria-hidden="true"> </i><small class="text-muted"> 09/02/2022 </small></p>
                   </div>
                   <hr class="pt-2">
 
-                  <p class="card-text"><i class="fa fa-map-marker" aria-hidden="true"> </i><small class="text-muted">  {{item.tema.descricao}} </small></p>
+                  <p class="card-text"><i class="fa fa-map-marker" aria-hidden="true"> </i><small class="text-muted">  São Paulo </small></p>
                   <p class="card-text"><i class="fa fa-exclamation-circle" aria-hidden="true"></i>
-                    <small class="text-muted">  #Feminismo #mulheres </small></p>
+                    <small class="text-muted">  Machismo </small></p>
                   <p class="card-text"><i class="fa fa-street-view" aria-hidden="true"></i>
-                    <small class="text-muted">  {{item.tema.assunto}} </small></p>
+                    <small class="text-muted">  Jardins </small></p>
 
                   <h5 class="card-text">Machismo !</h5>
                   <p class="card-title">Não sou de postar coisas sobre a minha vida pessoal, mas tenho certeza de que o fato que tive o desprazer de vivenciar hoje, pode encorajar muitas mulheres e conscientizar alguns homens que tenha o mínimo de raciocínio.
@@ -80,9 +81,9 @@
                     Eu tenho honra de ser uma feminista,ser tão forte quanto um homem!
                     Que esse post sirva pelo menos um pouco de alerta para nós mulheres e para os homens que tenho em meu facebook.
                     Só para reforçar, machismo da NOJO sim! Porem só vai acabar quando nós colocarmos um fim!</p>
-                  <p class="card-text"><small class="text-muted">{{item.hashtag}}</small></p>
+                  <p class="card-text"><small class="text-muted">#Feminismo #mulheres</small></p>
 
-                  <ng-container *ngIf="item.foto != 'vazio' ">
+                  <ng-container >
                     <img class=" img-fluid d-block mx-auto" src="../../assets/img/machismo.webp" styles=" border-radius: 30px;" alt="Imagem de capa do card">
                   </ng-container>
 
@@ -96,10 +97,7 @@
                   <input type="text" class="bgbox form-control rounded mt-2 mb-2 w-75" id="comentario" placeholder="Escreva um comentário">
                   </div>
 
-
-                  <!-- <div class="d-flex justify-content-center mt-5">
-                    <a *ngIf="authService.adm()" [routerLink]="['/postagem-delete', item.id]" class="btn btn-danger" href="">Apagar</a>
-                  </div> -->
+                  <!-- Fim da publicação única mulheres -->
 
                 </div>
 
@@ -151,21 +149,6 @@
           <input type="text" [(ngModel)]='postagem.foto' class="form-control" id="img" placeholder="Insira o link da sua imagem">
         </div>
 
-        <div class="form-group">
-          <label for="titulo">Título</label>
-          <input type="text" [(ngModel)]='postagem.titulo' class="form-control" id="titulo" placeholder="Digite o título">
-        </div>
-
-        <div class="form-group">
-        <label for="titulo">Texto</label>
-        <textarea [(ngModel)]='postagem.texto' class="form-control"  name="texto" id="" rows="3"></textarea>
-      </div>
-
-      <div class="form-group">
-        <label for="img">Imagem</label>
-        <input type="text" [(ngModel)]='postagem.foto' class="form-control" id="img" placeholder="Insira o link da sua imagem">
-      </div>
-
       <div class="form-group">
         <label for="img">Digite uma hashtag</label>
         <input type="text"  class="form-control" id="hashtag" placeholder="#Hashtag">
@@ -181,7 +164,7 @@
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-danger" data-dismiss="modal">Fechar</button>
-        <button type="button" class="btn btn-success" data-dismiss="modal" (click)='publicar()' >Publicar</button>
+        <button type="button" class="btn botaoP text-white" data-dismiss="modal" (click)='publicar()' >Publicar</button>
       </div>
 
     </div>

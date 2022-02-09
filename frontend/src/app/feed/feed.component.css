@@ -107,9 +107,16 @@ body{
 }
 .btn{
     overflow: hidden;
-    background: #38BFBF;
-    padding: 1em;
 }
+
+.botaoP {
+  background-color: #133e6f;
+}
+
+.botaoP:hover {
+  background-color: #3d71ac;
+}
+
 .ttl{
   color: #fff;
   margin: 0 0 0 2em;

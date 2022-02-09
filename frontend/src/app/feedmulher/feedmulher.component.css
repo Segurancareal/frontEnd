@@ -31,8 +31,8 @@ ul li a:before {
   height: 3px;
   bottom: 0;
   left: 0;
-  color: #133e6f;
-  background-color: #133e6f;
+  color: #8f0f8f;
+  background-color: #8f0f8f;
   visibility: hidden;
   -webkit-transform: scaleX(0);
   transform: scaleX(0);
@@ -41,7 +41,7 @@ ul li a:before {
 }
 
 ul li a:hover:before {
-  color: #133e6f;
+  color: #8f0f8f;
   text-decoration: underline;
   transition: 0.5s;
   visibility: visible;
@@ -59,8 +59,16 @@ ul li a:hover {
 }
 
 .bgbox{
-  background-color: #DCEBF9;
+  background-color: #fed9ff;
   background-size: cover;
+}
+
+.botaoP{
+  background-color: #8f0f8f;
+}
+
+.botaoP:hover {
+  background-color: #b438b4;
 }
 
 .bgbox:hover {
