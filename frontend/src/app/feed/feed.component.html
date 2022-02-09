@@ -1,7 +1,5 @@
-
 <div class="fundo texto">
   <div class="container-fluid  pb-5">
-
 
   <div class="row d-flex justify-content-around">
 
@@ -76,35 +74,39 @@
 
                 <hr class="pb-2 pt-2">
 
-                <div>
-                <a class="like texto pt-5 ml-2" onclick=""><i class="fa fa-thumbs-o-up" aria-hidden="true"></i></a>
-                </div>
-
+                  <div>
+                  <a class="like texto pt-5 ml-2" onclick=""><i class="fa fa-thumbs-o-up" aria-hidden="true"></i></a>
+                  </div>
 
                 <!-- <div class="d-flex justify-content-center mt-5">
                   <a *ngIf="authService.adm()" [routerLink]="['/postagem-delete', item.id]" class="btn btn-danger" href="">Apagar</a>
                 </div> -->
 
               </div>
-
           </div>
       </div>
       </div>
 
-      <div class="col-md-2 mt-5">
-          <div class="list-group font-weight-bold text-center">
-            <table class="list-group-item list-group-item-action active box">
-              Temas mais populares
-            </table>
+      <div class="col-md-2 mt-5 animate">
+          <div class="list-group font-weight-bold text-center btn">
+            <div class="toggleIcon"></div>
+              <table class="list-group-item list-group-item-action active box tll">
+                Temas mais populares
+              </table>
 
-            <table *ngFor='let item of listaTemas | orderBy : key : reverse' class="list-group-item list-group-item-action">
-              {{item.descricao}}
-            </table>
+              <ul>
+                <li>
+                  <table *ngFor='let item of listaTemas | orderBy : key : reverse' class="list-group-item list-group-item-action">
+                    {{item.descricao}}
+                  </table>
+                </li>
+              </ul>
           </div>
-      </div>
 
+
+      </div>
+    </div>
   </div>
-</div>
 </div>
 
 <!-- Modal para criar uma postagem-->
@@ -152,7 +154,6 @@
         <button type="button" class="btn btn-danger" data-dismiss="modal">Fechar</button>
         <button type="button" class="btn btn-success" data-dismiss="modal" (click)='publicar()' >Publicar</button>
       </div>
-
     </div>
   </div>
 </div>

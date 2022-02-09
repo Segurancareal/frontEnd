@@ -25,7 +25,7 @@ export class FeedComponent implements OnInit {
 
   tema: Tema = new Tema()
   listaTemas: Tema[]
-  idTema: number  
+  idTema: number
 
   user: Usuario = new Usuario()
   idUser = environment.id
@@ -108,12 +108,10 @@ export class FeedComponent implements OnInit {
       this.alertas.showAlertSuccess('Postagem Realizada com sucesso!')
       this.postagem = new Postagem()
       this.getAllPostagens()
-      
+
     })
 
   }
-
-
   //temas na pagina inicial
   findAllTemas() {
     this.temaService.getAllTema().subscribe((resp: Tema[]) => {
@@ -143,3 +141,5 @@ export class FeedComponent implements OnInit {
   }
 
 }
+
+
