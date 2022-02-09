@@ -22,6 +22,7 @@ import { PostagemEditComponent } from './edit/postagem-edit/postagem-edit.compon
 import { PostagemDeleteComponent } from './delete/postagem-delete/postagem-delete.component';
 import { UsuarioEditComponent } from './edit/usuario-edit/usuario-edit.component';
 import { MeuPerfilComponent } from './meu-perfil/meu-perfil.component';
+import { FeedmulherComponent } from './feedmulher/feedmulher.component';
 
 
 @NgModule({
@@ -40,7 +41,8 @@ import { MeuPerfilComponent } from './meu-perfil/meu-perfil.component';
     PostagemEditComponent,
     PostagemDeleteComponent,
     UsuarioEditComponent,
-    MeuPerfilComponent
+    MeuPerfilComponent,
+    FeedmulherComponent
   ],
   imports: [
     BrowserModule,

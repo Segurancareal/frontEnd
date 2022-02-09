@@ -30,7 +30,7 @@
           <h1 class="d-flex justify-content-center py-3">Minhas postagens</h1>
         </div>
 
-          <div *ngFor='let item of user.postagem | orderBy : key : reverse' class=" menupost d-flex justify-content-center card p-3 mt-5 rounded" style="width: 50rem;">
+          <div *ngFor='let item of user.postagem | orderBy : key : reverse' class=" menupost d-flex justify-content-center card p-3 mt-5 rounded w-75" style="width: 50rem;">
               <p class="card-text text-center font-weight-bold"><small class="text-muted">{{item.tema.descricao}}</small></p>
               <p class="card-text text-center"><small class="text-muted">{{item.data| date: 'dd/MM/yyyy'}}</small></p>
               <h5 class="card-title text-center">{{item.titulo}}</h5>

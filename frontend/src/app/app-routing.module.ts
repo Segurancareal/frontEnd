@@ -12,6 +12,7 @@ import { PostagemEditComponent } from './edit/postagem-edit/postagem-edit.compon
 import { PostagemDeleteComponent } from './delete/postagem-delete/postagem-delete.component';
 import { UsuarioEditComponent } from './edit/usuario-edit/usuario-edit.component';
 import { MeuPerfilComponent } from './meu-perfil/meu-perfil.component';
+import { FeedmulherComponent } from './feedmulher/feedmulher.component';
 
 const routes: Routes = [
   {path:"",redirectTo:"inicio",pathMatch: "full"},
@@ -27,7 +28,8 @@ const routes: Routes = [
   {path: "postagem-edit/:id", component: PostagemEditComponent},
   {path: "postagem-delete/:id", component: PostagemDeleteComponent},
   {path: "usuario-edit/:id", component: UsuarioEditComponent},
-  {path: "meu-perfil", component: MeuPerfilComponent}
+  {path: "meu-perfil", component: MeuPerfilComponent},
+  {path: "feedmulher", component: FeedmulherComponent}
 
 ];
 
