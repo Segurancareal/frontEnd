@@ -7,6 +7,10 @@
   font-size: 500%
 }
 
+.fdTela{
+  background-image: url("../../assets/img/fdTela.png");
+}
+
 .titulo-C{
   font: size 600px;
 }

@@ -1,129 +1,156 @@
 
 <div class="fundo texto">
-  <div class="container-fluid  pb-5">
+    <div class="container-fluid  pb-5">
 
 
-  <div class="row d-flex justify-content-around">
+    <div class="row d-flex justify-content-around">
 
-      <!-- Div do card do Perfil -->
-      <div class="col-md-2 m-0">
-          <div class=" menuside card mt-5 d-flex justify-content-center align-items-center box" style="width: 100%;">
+        <!-- Div do card do Perfil -->
+        <div class="col-md-2 m-0">
+            <div class=" menuside card mt-5 d-flex justify-content-center align-items-center box" style="width: 100%;">
 
-            <img class=" card-img-top mt-2" src="{{foto}}" class="rounded mt-4"
-                  alt="Imagem de perfil do usuário" style="width: 70% ">
+              <img class=" card-img-top mt-2" src="{{foto}}" class="rounded mt-4"
+                    alt="Imagem de perfil do usuário" style="width: 70% ">
 
-                  <hr>
+                    <hr>
 
-                    <h5 class="pt-3 card-title">{{nome}}</h5>
+                      <h5 class="pt-3 card-title">{{nome}}</h5>
 
-                  <ul class="list-group d-block mx-auto list-group-flush mb-3" style="width: 100%;">
+                    <ul class="list-group d-block mx-auto list-group-flush mb-3" style="width: 100%;">
 
-                    <li class="list-group-item d-block mx-auto">
-                      <a routerLink='/meu-perfil' ><i class="fa fa-user" aria-hidden="true"></i> Minhas postagens</a>
-                    </li>
+                      <li class="list-group-item d-block mx-auto">
+                        <a routerLink='/meu-perfil' ><i class="fa fa-user" aria-hidden="true"></i> Minhas postagens</a>
+                      </li>
 
-                    <li class="list-group-item d-block mx-auto">
-                      <a [routerLink]="['/usuario-edit', id]"><i class="fa fa-cog" aria-hidden="true"></i> Editar perfil</a>
-                    </li>
+                      <li class="list-group-item d-block mx-auto">
+                        <a [routerLink]="['/usuario-edit', id]"><i class="fa fa-cog" aria-hidden="true"></i> Editar perfil</a>
+                      </li>
 
-                </ul>
-          </div>
-      </div>
+                  </ul>
+            </div>
+        </div>
 
-      <div class="col-md-8 d-flex justify-content-center flex-wrap">
+        <div class="col-md-8 d-flex justify-content-center flex-wrap">
 
-          <!-- div para publicar e pesquisar -->
-          <div class="container col-lg-10 profile-col-main pt-5 rounded">
-              <div class="panel ">
-                  <div class="panel-body p-4 border box2 rounded">
+            <!-- div para publicar e pesquisar -->
+            <div class="container col-lg-10 profile-col-main pt-5 rounded">
+                <div class="panel ">
+                    <div class="panel-body p-4 border box2 rounded">
 
-                      <textarea class="form-control mt-3 bd-redonda bgbox" rows="3" placeholder="Qual a ideia de hoje?" data-toggle="modal" data-target="#novaPostagem"></textarea>
+                        <textarea class="form-control mt-3 bd-redonda bgbox" rows="3" placeholder="Qual a ideia de hoje?" data-toggle="modal" data-target="#novaPostagem"></textarea>
 
-                      <div class="form-group mt-5">
-                        <input type="text"
-                        class="form-control bgbox" id="titulo"
-                        placeholder="Digite um título de postagem para pesquisar" [(ngModel)]="tituloPost" (keyup)="findByTituloPostagem()">
-                      </div>
+                        <div class="form-group mt-5">
+                          <input type="text"
+                          class="form-control bgbox" id="titulo"
+                          placeholder="Digite um título de postagem para pesquisar" [(ngModel)]="tituloPost" (keyup)="findByTituloPostagem()">
+                        </div>
 
+                    </div>
+                </div>
+            </div>
+
+            <!-- div rolagem infinita -->
+            <div class="container d-flex justify-content-center flex-wrap w-75">
+            <div *ngFor='let item of listaPostagens | orderBy : key : reverse ' class=" rolagem my-3" style="width: 600px" >
+
+                <div class="card-body">
+                  <div class="d-flex justify-content-between ">
+                  <h5 class="card-title"><img src="../../assets/img/mariana.jpg" width="45px" height="45px" class="circle img-fluid">  Mariana Elena</h5>
+                  <p class="card-text"><i class="fa fa-calendar" aria-hidden="true"> </i><small class="text-muted"> {{item.data| date: 'dd/MM/yyyy'}} </small></p>
                   </div>
-              </div>
-          </div>
+                  <hr class="pt-2">
 
-          <!-- div rolagem infinita -->
-          <div class="container d-flex justify-content-center flex-wrap w-75">
-          <div *ngFor='let item of listaPostagens | orderBy : key : reverse ' class=" rolagem my-3" style="width: 600px" >
+                  <p class="card-text"><i class="fa fa-map-marker" aria-hidden="true"> </i><small class="text-muted">  {{item.tema.descricao}} </small></p>
+                  <p class="card-text"><i class="fa fa-exclamation-circle" aria-hidden="true"></i>
+                    <small class="text-muted">  #Feminismo #mulheres </small></p>
+                  <p class="card-text"><i class="fa fa-street-view" aria-hidden="true"></i>
+                    <small class="text-muted">  {{item.tema.assunto}} </small></p>
 
-              <div class="card-body">
-                <div class="d-flex justify-content-between ">
-                <h5 class="card-title"><img src="{{item.usuario.foto}}" width="45px" height="45px" class="circle">  {{item.usuario.nome}}</h5>
-                <p class="card-text"><i class="fa fa-calendar" aria-hidden="true"> </i><small class="text-muted"> {{item.data| date: 'dd/MM/yyyy'}} </small></p>
+                  <h5 class="card-text">Machismo !</h5>
+                  <p class="card-title">Não sou de postar coisas sobre a minha vida pessoal, mas tenho certeza de que o fato que tive o desprazer de vivenciar hoje, pode encorajar muitas mulheres e conscientizar alguns homens que tenha o mínimo de raciocínio.
+                    Retornando do meu estágio para casa, utilizo 4 transportes, no último sempre enfrento mais movimento e grandes filas como todo mundo! Assim que o ónibus chegou as pessoas que estavam na fila foram subindo e consequentemente eu tambem, logo se aproximaram algumas pessoas que nao estavam na minha frente na fila, na verdade nem sei de onde vieram, e cortaram a fila, passando na frente do pessoal que estava ali a vários  minutos esperando, bem do meu lado era um rapaz que passava na frente, aquilo me incomodou mas deixei pra la e entrei no onibus um pouco a frente dele. Quando o transporte ja havia saido a caminho do bairro, aquele rapaz começou a me empurrar muito, e me pressionar para conseguir passar a minha frente, mesmo sem ter espaço! Aquilo continuou e eu perdi o resto de paciência que me sobrava, olhei para a cara dele com uma expressão fechada, para ele se tocar que estava me incomodando, nesse momento ele falou com um tom arrogante e imponente:
+                    - O que é?
+                    Eu disse:
+                    - Você ainda pergunta? Você passou na frente de todo mundo inclusive na minha, empurrou todo mundo, não pegou nem fila e ainda continua até agora me empurrando e me pressionando.
+                    Ele começou a gritar:
+                    - Cala a Boca! Cala a Boca!
+                    Gritando e se impondo a mim. Eu realmente perdi o meu equilíbrio e falei pra ele parar de me desrepeitar e que ele não tinha o direito de falar daquela forma comigo, ele continuou e de uma forma mais agressiva. Ai eu coloquei ele no devido lugar, pq falei mais alto SIM do que ele, e me impondo muito mais do que ele, só que falando dos meus direitos como mulher e como ser humano. Não é pq ele é homem que tinha o direito de me mandar calar a boca e gritar comigo, na verdade ele não tem direito de fazer isso com ninguem, ainda por cima estando errado, provavelmente se eu fosse um homem ele não teria passado nem na minha frente e muito menos me mandado calar a boca! Chamei ele de machista e falei que ele é acostumado a falar  com a mulher e filha ou mãe dele dessa forma, que pena delas, mas comigo homem nenhum se coloca dessa forma. Logo ele ficou envergonhado, obvio né, e quem acabou calando a boca foi ele mesmo!
+                    Infelizmente, não tive apoio nenhum das pessoas que ali estavam, todos só olharam mesmo e fizeram alguns comentários a meu favor, mas inibidos.
+                    Isso é inaceitável, estamos em um mundo onde o feminismo graças a Deus existe, onde as mulheres são a maioria na sociedade e assumem muito mais posições, temos os mesmos direitos como seres humanos, mesmo tendo menos força física. Toda mulher deve SIM saber como deve ser tratada dentro de suas casas, ambientes corporativos, escolares e públicos e se impor SIM contra esses dinossauros maxistas que prevalecem, eu tenho NOJO!
+                    Eu tenho honra de ser uma feminista,ser tão forte quanto um homem!
+                    Que esse post sirva pelo menos um pouco de alerta para nós mulheres e para os homens que tenho em meu facebook.
+                    Só para reforçar, machismo da NOJO sim! Porem só vai acabar quando nós colocarmos um fim!</p>
+                  <p class="card-text"><small class="text-muted">{{item.hashtag}}</small></p>
+
+                  <ng-container *ngIf="item.foto != 'vazio' ">
+                    <img class=" img-fluid d-block mx-auto" src="../../assets/img/machismo.webp" styles=" border-radius: 30px;" alt="Imagem de capa do card">
+                  </ng-container>
+
+                  <hr class="pb-2 pt-2">
+
+                  <div class="d-flex justify-content-between">
+                    <a class="btn no-wrap like texto ml-2">
+                  <i onclick="contador()" class="mt-2 fa fa-thumbs-o-up" aria-hidden="true"></i>
+                  7
+                  </a>
+                  <input type="text" class="bgbox form-control rounded mt-2 mb-2 w-75" id="comentario" placeholder="Escreva um comentário">
+                  </div>
+
+
+                  <!-- <div class="d-flex justify-content-center mt-5">
+                    <a *ngIf="authService.adm()" [routerLink]="['/postagem-delete', item.id]" class="btn btn-danger" href="">Apagar</a>
+                  </div> -->
+
                 </div>
-                <hr class="pt-2">
 
-                <p class="card-text"><i class="fa fa-map-marker" aria-hidden="true"> </i><small class="text-muted">  {{item.tema.descricao}} </small></p>
-                <p class="card-text"><i class="fa fa-exclamation-circle" aria-hidden="true"></i>
-                  <small class="text-muted">  {{item.tema.hashtag}} </small></p>
-                <p class="card-text"><i class="fa fa-street-view" aria-hidden="true"></i>
-                  <small class="text-muted">  {{item.tema.assunto}} </small></p>
+            </div>
+        </div>
+        </div>
 
-                <h5 class="card-text">{{item.titulo}}</h5>
-                <p class="card-title">{{item.texto}}</p>
-                <p class="card-text"><small class="text-muted">{{item.hashtag}}</small></p>
+        <div class="col-md-2 mt-5">
+            <div class="list-group font-weight-bold text-center">
+              <table class="list-group-item list-group-item-action active box">
+                Temas mais populares
+              </table>
 
-                <ng-container *ngIf="item.foto != 'vazio' ">
-                  <img class=" img-fluid d-block mx-auto" src="{{item.foto}}" styles=" border-radius: 30px;" alt="Imagem de capa do card">
-                </ng-container>
+              <table *ngFor='let item of listaTemas | orderBy : key : reverse' class="list-group-item list-group-item-action">
+                {{item.descricao}}
+              </table>
+            </div>
+        </div>
 
-                <hr class="pb-2 pt-2">
-
-                <div class="d-flex justify-content-between">
-                  <a class="btn no-wrap like texto ml-2">
-                <i onclick="contador()" class="mt-2 fa fa-thumbs-o-up" aria-hidden="true"></i>
-                7
-                </a>
-                <input type="text" class="bgbox form-control rounded mt-2 mb-2 w-75" id="comentario" placeholder="Escreva um comentário">
-                </div>
-
-
-                <!-- <div class="d-flex justify-content-center mt-5">
-                  <a *ngIf="authService.adm()" [routerLink]="['/postagem-delete', item.id]" class="btn btn-danger" href="">Apagar</a>
-                </div> -->
-
-              </div>
-
-          </div>
-      </div>
-      </div>
-
-      <div class="col-md-2 mt-5">
-          <div class="list-group font-weight-bold text-center">
-            <table class="list-group-item list-group-item-action active box">
-              Temas mais populares
-            </table>
-
-            <table *ngFor='let item of listaTemas | orderBy : key : reverse' class="list-group-item list-group-item-action">
-              {{item.descricao}}
-            </table>
-          </div>
-      </div>
-
+    </div>
   </div>
-</div>
-</div>
+  </div>
 
-<!-- Modal para criar uma postagem-->
-<div class="modal fade" id="novaPostagem" tabindex="-1" role="dialog" aria-labelledby="TituloModalCentralizado" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered" role="document">
+  <!-- Modal para criar uma postagem-->
+  <div class="modal fade" id="novaPostagem" tabindex="-1" role="dialog" aria-labelledby="TituloModalCentralizado" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
 
-    <div class="modal-content fundo texto font-weight-bold">
-      <div class="modal-header">
-        <h5 class="modal-title" id="TituloModalCentralizado">Fazer Postagem</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
+      <div class="modal-content fundo texto font-weight-bold">
+        <div class="modal-header">
+          <h5 class="modal-title" id="TituloModalCentralizado">Fazer Postagem</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
 
-      <div class="modal-body">
+        <div class="modal-body">
+          <div class="form-group">
+            <label for="titulo">Título</label>
+            <input type="text" [(ngModel)]='postagem.titulo' class="form-control" id="titulo" placeholder="Digite o título">
+          </div>
+
+          <div class="form-group">
+          <label for="titulo">Texto</label>
+          <textarea [(ngModel)]='postagem.texto' class="form-control"  name="texto" id="" rows="3"></textarea>
+        </div>
+
+        <div class="form-group">
+          <label for="img">Imagem</label>
+          <input type="text" [(ngModel)]='postagem.foto' class="form-control" id="img" placeholder="Insira o link da sua imagem">
+        </div>
+
         <div class="form-group">
           <label for="titulo">Título</label>
           <input type="text" [(ngModel)]='postagem.titulo' class="form-control" id="titulo" placeholder="Digite o título">

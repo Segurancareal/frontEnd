@@ -14,6 +14,7 @@ export class MenufeedComponent implements OnInit {
   nome = environment.nome
   id = environment.id
 
+
   constructor(private router : Router) { }
 
   ngOnInit() {
@@ -27,6 +28,4 @@ export class MenufeedComponent implements OnInit {
     environment.nome=""
     this.router.navigate(["/inicio"])
   }
-
 }
-
