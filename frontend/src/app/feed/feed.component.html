@@ -48,7 +48,7 @@
           </div>
 
           <!-- div rolagem infinita -->
-          <div class="container d-flex justify-content-center flex-wrap w-75">
+          <div class="container d-flex justify-content-center flex-wrap w-100">
           <div *ngFor='let item of listaPostagens | orderBy : key : reverse ' class=" rolagem my-3" style="width: 600px" >
 
               <div class="card-body">
@@ -92,24 +92,16 @@
       </div>
       </div>
 
-      <div class="col-md-2 mt-5 animate">
-          <div class="list-group font-weight-bold text-center btn">
-            <div class="toggleIcon"></div>
-              <table class="list-group-item list-group-item-action active box tll">
-                Temas mais populares
-              </table>
+      <div class="col-md-2 mt-5">
+        <div class="list-group font-weight-bold text-center">
+          <table class="list-group-item list-group-item-action active box">
+            Temas mais populares
+          </table>
 
-              <ul>
-                <li>
-                  <table *ngFor='let item of listaTemas | orderBy : key : reverse' class="list-group-item list-group-item-action">
-                    {{item.descricao}}
-                  </table>
-                </li>
-              </ul>
-          </div>
-
-
-      </div>
+          <table *ngFor='let item of listaTemas | orderBy : key : reverse' class="list-group-item list-group-item-action">
+            {{item.descricao}}
+          </table>
+        </div>
     </div>
   </div>
 </div>

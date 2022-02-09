@@ -1,5 +1,5 @@
 .fundo {
-    background-color: #DCEBF9;
+    background-color: #fed9ff;
 }
 
 .box2{
@@ -9,8 +9,6 @@
 .texto {
     color: #000000;
 }
-
-
 
 ul li a,
 ul li {
@@ -52,12 +50,12 @@ ul li a:hover:before {
 }
 
 ul li a:hover {
-  color: #133e6f;
+  color: #8f0f8f;
 
 }
 
 .box{
-  background-color: #133e6f;
+  background-color: #8f0f8f;
 }
 
 .bgbox{
@@ -71,7 +69,7 @@ ul li a:hover {
 
 .menuside{
   border-radius: 10px !important;
-  background-color: #133e6f !important;
+  background-color: #8f0f8f !important;
   width: 240px !important;
 }
 
@@ -115,7 +113,7 @@ ul li a:hover {
 }
 
 .like:hover{
-  color: #133e6f;
+  color: #8f0f8f;
 }
 
 
